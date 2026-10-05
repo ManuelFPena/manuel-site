@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Design tokens
+   Restrained neutral palette, one accent (deep green).
+   Dark mode follows the visitor's system setting; no toggle needed.
+   ------------------------------------------------------------------ */
+:root {
+  --bg: #f7f6f2;
+  --surface: #efede6;
+  --ink: #16150f;
+  --muted: #57544b;
+  --faint: #6f6b61;
+  --rule: #dcd8cc;
+  --accent: #1f5e4b;
+  --accent-soft: #e2ece6;
+  --todo: #8a5a00;
+  --todo-bg: #fbf1d9;
+  --private: #b4233c;
+  --private-bg: #fbe4e8;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11110e;
+    --surface: #1a1a16;
+    --ink: #ecebe4;
+    --muted: #aaa69b;
+    --faint: #8d897e;
+    --rule: #2d2c26;
+    --accent: #86c7ab;
+    --accent-soft: #1b2a24;
+    --todo: #f0c56a;
+    --todo-bg: #2a2416;
+    --private: #ff8fa3;
+    --private-bg: #2e161b;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-todo: var(--todo);
+  --color-todo-bg: var(--todo-bg);
+  --color-private: var(--private);
+  --color-private-bg: var(--private-bg);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-mono: var(--font-mono-face), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection {
+    background: var(--accent);
+    color: var(--bg);
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  /* Anchored sections clear the sticky header */
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@layer components {
+  /* Small uppercase mono label used for section markers and metadata */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+
+  /* Display headings in the serif */
+  .display {
+    font-family: var(--font-serif);
+    font-weight: 380;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 72;
+  }
+
+  /* Long-form text */
+  .prose-body {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+  .prose-body p + p {
+    margin-top: 1rem;
+  }
+  .prose-body strong {
+    color: var(--ink);
+    font-weight: 550;
+  }
+
+  /* Underline that grows on hover */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 300ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Motion: one quiet page-enter fade. Disabled for reduced motion.
+   ------------------------------------------------------------------ */
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.page-enter {
+  animation: page-enter 520ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

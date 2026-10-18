@@ -16,27 +16,24 @@ export default function ThinkingPage() {
   return (
     <>
       <PageIntro label="Thinking" title="Notes on product, data and decisions.">
-        <p>
-          Short pieces on product, e-commerce, analytics, AI, experimentation and digital platforms. Practical, not
-          theoretical.
-        </p>
+        <p>Short, practical pieces on product, analytics, AI and platforms.</p>
       </PageIntro>
 
-      <Container className="pb-24 lg:pb-32">
+      <Container className="pb-14 lg:pb-20">
         {posts.length > 0 && (
-          <section aria-labelledby="published" className="mb-20">
+          <section aria-labelledby="published" className="mb-12">
             <h2 id="published" className="eyebrow mb-6">
               Published
             </h2>
             <ul className="border-b border-rule">
               {posts.map((p) => (
-                <li key={p.slug} className="grid grid-cols-1 gap-2 border-t border-rule py-8 sm:grid-cols-[10rem_1fr]">
+                <li key={p.slug} className="grid grid-cols-1 gap-1.5 border-t border-rule py-5 sm:grid-cols-[9rem_1fr]">
                   <time dateTime={p.date} className="eyebrow pt-1.5">
                     {dateFmt.format(new Date(p.date))}
                   </time>
                   <div>
-                    <h3 className="display text-[1.7rem] leading-tight">{p.title}</h3>
-                    <p className="mt-2 text-muted">{p.summary}</p>
+                    <h3 className="display text-[1.3rem] leading-tight">{p.title}</h3>
+                    <p className="mt-1 text-[0.95rem] text-muted">{p.summary}</p>
                   </div>
                 </li>
               ))}
@@ -55,12 +52,12 @@ export default function ThinkingPage() {
             {workingTitles.map((w) => (
               <li
                 key={w.title}
-                className="grid grid-cols-1 gap-y-2 border-t border-rule py-8 sm:grid-cols-[10rem_1fr] sm:gap-x-8"
+                className="grid grid-cols-1 gap-y-1.5 border-t border-rule py-5 sm:grid-cols-[9rem_1fr] sm:gap-x-6"
               >
-                <p className="eyebrow pt-2 text-accent">{w.topic}</p>
+                <p className="eyebrow pt-1.5 text-accent">{w.topic}</p>
                 <div>
-                  <h3 className="display text-[1.7rem] leading-tight text-ink/80">{w.title}</h3>
-                  <p className="mt-2 max-w-[56ch] text-muted">{w.line}</p>
+                  <h3 className="display text-[1.3rem] leading-tight text-ink/80">{w.title}</h3>
+                  <p className="mt-1 max-w-[56ch] text-[0.95rem] text-muted">{w.line}</p>
                 </div>
               </li>
             ))}

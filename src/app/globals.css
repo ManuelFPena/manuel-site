@@ -70,6 +70,7 @@
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
     -moz-osx-font-smoothing: grayscale;
   }
   ::selection {
@@ -83,7 +84,7 @@
   }
   /* Anchored sections clear the sticky header */
   [id] {
-    scroll-margin-top: 6rem;
+    scroll-margin-top: 5rem;
   }
 }
 
@@ -108,12 +109,12 @@
 
   /* Long-form text */
   .prose-body {
-    font-size: 1.0625rem;
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 1.65;
     color: var(--muted);
   }
   .prose-body p + p {
-    margin-top: 1rem;
+    margin-top: 0.85rem;
   }
   .prose-body strong {
     color: var(--ink);

@@ -19,38 +19,38 @@ export default function ExperiencePage() {
   return (
     <>
       <PageIntro label="Experience" title="Three chapters, one direction.">
-        <p>From understanding consumers, to analysing how they buy, to owning the product they use. Newest first.</p>
+        <p>Understanding consumers, then how they buy, then the product they use.</p>
       </PageIntro>
 
-      <Container className="pb-20 lg:pb-28">
+      <Container className="pb-14 lg:pb-20">
         <ol className="border-b border-rule">
           {chapters.map((ch, ci) => (
-            <li key={ch.label} className="grid grid-cols-1 gap-y-6 border-t border-rule py-12 lg:grid-cols-12 lg:gap-x-12 lg:py-16">
+            <li key={ch.label} className="grid grid-cols-1 gap-y-4 border-t border-rule py-8 lg:grid-cols-12 lg:gap-x-12 lg:py-10">
               <div className="lg:col-span-4">
                 <p className="font-mono text-[0.75rem] text-accent">
                   Chapter {String(chapters.length - ci).padStart(2, "0")}
                 </p>
-                <h2 className="display mt-3 text-[2rem] leading-[1.08]">{ch.label}</h2>
-                <p className="mt-3 max-w-[30ch] text-[0.98rem] leading-relaxed text-muted">{ch.theme}</p>
+                <h2 className="display mt-2 text-[1.5rem] leading-[1.1]">{ch.label}</h2>
+                <p className="mt-1.5 max-w-[30ch] text-[0.92rem] leading-relaxed text-muted">{ch.theme}</p>
               </div>
 
               <div className="lg:col-span-8">
                 {ch.roles.map((r, ri) => (
-                  <div key={ri} className="grid grid-cols-1 gap-y-3 sm:grid-cols-[10rem_1fr] sm:gap-x-8">
+                  <div key={ri} className="grid grid-cols-1 gap-y-2 sm:grid-cols-[9rem_1fr] sm:gap-x-6">
                     <p className="eyebrow pt-1.5">
                       <Text value={r.period} />
                     </p>
                     <div>
-                      <h3 className="text-[1.25rem] font-medium leading-snug tracking-[-0.01em]">
+                      <h3 className="text-[1.08rem] font-medium leading-snug tracking-[-0.01em]">
                         <Text value={r.title} />
                       </h3>
-                      <p className="mt-1 text-[1rem] text-muted">
+                      <p className="mt-0.5 text-[0.95rem] text-muted">
                         <Text value={r.org} />
                       </p>
-                      <p className="mt-4 max-w-[56ch] text-[1rem] leading-relaxed text-muted">
+                      <p className="mt-2 max-w-[56ch] text-[0.95rem] leading-relaxed text-muted">
                         <Text value={r.line} />
                       </p>
-                      <Tags items={r.focus} className="mt-5" />
+                      <Tags items={r.focus} className="mt-3" />
                     </div>
                   </div>
                 ))}
@@ -58,18 +58,18 @@ export default function ExperiencePage() {
             </li>
           ))}
 
-          <li className="grid grid-cols-1 gap-y-6 border-t border-rule py-12 lg:grid-cols-12 lg:gap-x-12 lg:py-16">
+          <li className="grid grid-cols-1 gap-y-4 border-t border-rule py-8 lg:grid-cols-12 lg:gap-x-12 lg:py-10">
             <div className="lg:col-span-4">
-              <h2 className="display text-[2rem] leading-[1.08]">Education</h2>
+              <h2 className="display text-[1.5rem] leading-[1.1]">Education</h2>
             </div>
             <div className="lg:col-span-8">
               {education.map((e, i) => (
-                <div key={i} className="grid grid-cols-1 gap-y-3 sm:grid-cols-[10rem_1fr] sm:gap-x-8">
+                <div key={i} className="grid grid-cols-1 gap-y-2 sm:grid-cols-[9rem_1fr] sm:gap-x-6">
                   <p className="eyebrow pt-1.5">
                     <Text value={e.period} />
                   </p>
                   <div>
-                    <h3 className="text-[1.25rem] font-medium leading-snug">
+                    <h3 className="text-[1.08rem] font-medium leading-snug">
                       <Text value={e.title} />
                     </h3>
                     <p className="mt-1 text-muted">
@@ -82,7 +82,7 @@ export default function ExperiencePage() {
           </li>
         </ol>
 
-        <div className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-4">
+        <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">
           <ArrowLink href="/about/">The story behind it</ArrowLink>
           {isTodo(contact.cv) ? (
             <TodoTag note={contact.cv.todo} />

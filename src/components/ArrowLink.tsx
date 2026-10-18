@@ -13,7 +13,7 @@ export function ArrowLink({
   return (
     <Link
       href={href}
-      className={`group inline-flex items-center gap-2 text-[0.95rem] font-medium text-ink ${className}`}
+      className={`group inline-flex items-center gap-2 text-[0.92rem] font-medium text-ink ${className}`}
     >
       <span className="link-underline pb-0.5">{children}</span>
       <span

@@ -17,26 +17,26 @@ export const workingTitles = [
   {
     topic: "Analytics",
     title: "Reporting is not insight",
-    line: "A dashboard that changes no decision is a cost, not an asset.",
+    line: "A dashboard that changes no decision is a cost.",
   },
   {
     topic: "E-commerce",
     title: "Search fails quietly",
-    line: "Why on-site search deserves to be treated as a product, with its own funnel.",
+    line: "Treat on-site search as a product with its own funnel.",
   },
   {
     topic: "Platforms",
     title: "Global platform, local truths",
-    line: "Deciding what to standardize and what to let markets own.",
+    line: "What to standardize, what to let markets own.",
   },
   {
     topic: "AI",
     title: "What AI changes about product decisions",
-    line: "And what it does not: judgment, context and accountability.",
+    line: "And what it doesn't: judgment and accountability.",
   },
   {
     topic: "Experimentation",
     title: "Shipping is the midpoint",
-    line: "Designing measurement before the build, not after the launch.",
+    line: "Design measurement before the build.",
   },
 ];

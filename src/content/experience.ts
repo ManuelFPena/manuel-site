@@ -21,26 +21,26 @@ export type Chapter = {
 export const chapters: Chapter[] = [
   {
     label: "Product ownership",
-    theme: "Owning a global digital product end to end.",
+    theme: "A global digital product, end to end.",
     roles: [
       {
         period: todo("Start year to present"),
         title: "Product Owner, Home.ID",
         org: "Versuni",
-        line: "Global consumer-care platform for Philips-branded domestic appliances.",
+        line: "Global consumer-care platform for Philips appliances.",
         focus: ["Strategy & roadmap", "Platform integrations", "Localization", "Measurement"],
       },
     ],
   },
   {
     label: "E-commerce & analytics",
-    theme: "Turning consumer and commercial behavior into decisions.",
+    theme: "Behavior into decisions.",
     roles: [
       {
         period: todo("Years"),
         title: todo("Exact title, e.g. Lead, D2C E-commerce Insights & Analytics"),
         org: todo("Organization"),
-        line: "Insights and analytics for D2C e-commerce across millions of consumer sessions.",
+        line: "D2C e-commerce insights across millions of sessions.",
         focus: ["Funnel optimization", "Search analytics", "Experimentation", "Attribution"],
       },
     ],

@@ -14,15 +14,12 @@ export default function WorkPage() {
   return (
     <>
       <PageIntro label="Work" title="Selected work.">
-        <p>
-          Product and analytics work across consumer care and D2C e-commerce. Each case follows the same shape: problem,
-          context, my role, approach, decision, outcome.
-        </p>
+        <p>Product and analytics work in consumer care and D2C e-commerce.</p>
       </PageIntro>
-      <Container className="pb-24 lg:pb-32">
+      <Container className="pb-14 lg:pb-20">
         <WorkList headingLevel="h2" />
-        <p className="mt-8 max-w-[60ch] text-[0.9rem] leading-relaxed text-faint">
-          Some details are left out on purpose. Confidential figures, internal systems and names stay internal.
+        <p className="mt-6 max-w-[60ch] text-[0.82rem] leading-relaxed text-faint">
+          Confidential figures, systems and names are left out on purpose.
         </p>
       </Container>
     </>

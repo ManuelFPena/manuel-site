@@ -3,56 +3,57 @@ import { isTodo } from "@/content/types";
 import { Container } from "./Container";
 import { TodoTag } from "./Text";
 
-function ContactLink({ label, value, kind }: { label: string; value: (typeof contact)["email"]; kind: "email" | "url" }) {
-  return (
-    <div className="flex flex-col gap-2 border-t border-rule py-5 sm:flex-row sm:items-baseline sm:justify-between">
-      <span className="eyebrow">{label}</span>
-      {isTodo(value) ? (
-        <TodoTag note={value.todo} />
-      ) : (
-        <a
-          href={kind === "email" ? `mailto:${value}` : value}
-          {...(kind === "url" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-          className="link-underline display pb-0.5 text-[1.5rem] leading-tight sm:text-[1.75rem]"
-        >
-          {kind === "email" ? value : value.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")}
-        </a>
-      )}
-    </div>
-  );
-}
+const links: { label: string; value: (typeof contact)["email"]; kind: "email" | "url" }[] = [
+  { label: "Email", value: contact.email, kind: "email" },
+  { label: "LinkedIn", value: contact.linkedin, kind: "url" },
+  { label: "GitHub", value: contact.github, kind: "url" },
+];
+
+const display = (v: string, kind: "email" | "url") =>
+  kind === "email" ? v : v.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
 
 export function SiteFooter() {
-  const built = new Date();
-  const year = built.getFullYear();
-  const updated = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", year: "numeric" }).format(built);
+  const year = new Date().getFullYear();
   return (
     <footer id="contact" aria-labelledby="contact-heading" className="border-t border-rule bg-surface">
-      <Container className="grid grid-cols-1 gap-y-10 py-20 lg:grid-cols-12 lg:gap-x-12 lg:py-28">
+      <Container className="grid grid-cols-1 gap-y-5 py-12 sm:py-14 lg:grid-cols-12 lg:gap-x-12 lg:py-16">
         <div className="lg:col-span-3">
-          <p className="eyebrow">Contact</p>
+          <p className="eyebrow lg:pt-2">Contact</p>
         </div>
         <div className="lg:col-span-9">
-          <h2 id="contact-heading" className="display max-w-[20ch] text-[2.2rem] leading-[1.08] sm:text-[3rem]">
+          <h2 id="contact-heading" className="display max-w-[24ch] text-[1.6rem] leading-[1.15] sm:text-[1.9rem]">
             Working on a hard product problem? <span className="italic text-accent">Let&rsquo;s talk.</span>
           </h2>
-          <p className="prose-body mt-5 max-w-[52ch]">
-            Product, e-commerce, analytics or consumer experience. I am happy to compare notes.
-          </p>
-          <div className="mt-12 max-w-[760px] border-b border-rule">
-            <ContactLink label="Email" value={contact.email} kind="email" />
-            <ContactLink label="LinkedIn" value={contact.linkedin} kind="url" />
-          </div>
+          <dl className="mt-8 grid grid-cols-1 gap-y-5 border-t border-rule pt-6 sm:grid-cols-3 sm:gap-x-8">
+            {links.map(({ label, value, kind }) => (
+              <div key={label} className="min-w-0">
+                <dt className="eyebrow">{label}</dt>
+                <dd className="mt-1.5">
+                  {isTodo(value) ? (
+                    <TodoTag note={value.todo} />
+                  ) : (
+                    <a
+                      href={kind === "email" ? `mailto:${value}` : value}
+                      {...(kind === "url" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      className="link-underline break-words pb-0.5 text-[0.98rem] text-ink hover:text-accent"
+                    >
+                      {display(value, kind)}
+                    </a>
+                  )}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </Container>
-      <Container className="flex flex-col gap-2 border-t border-rule py-8 text-[0.85rem] text-faint sm:flex-row sm:justify-between">
-        <p>
-          © {year} {site.name}
-        </p>
-        <p>
-          {site.location} <span aria-hidden="true">·</span> Last updated {updated}
-        </p>
-      </Container>
+      <div className="border-t border-rule">
+        <Container className="flex items-center justify-between gap-4 py-5 text-[0.8rem] text-faint">
+          <p>
+            © {year} {site.name}
+          </p>
+          <p>{site.location}</p>
+        </Container>
+      </div>
     </footer>
   );
 }

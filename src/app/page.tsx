@@ -5,7 +5,8 @@ import { Fluency } from "@/components/Fluency";
 import { Portrait } from "@/components/Portrait";
 import { Principles } from "@/components/Principles";
 import { Section } from "@/components/Section";
-import { WorkList } from "@/components/WorkList";
+import { ProjectGrid } from "@/components/ProjectGrid";
+import { projects } from "@/content/projects";
 import { contact, site } from "@/content/site";
 import { isTodo } from "@/content/types";
 
@@ -97,8 +98,8 @@ export default function HomePage() {
         <Evolution />
       </Section>
 
-      <Section id="work" index="02" label="Selected work" title="Problems I have worked on.">
-        <WorkList />
+      <Section id="work" index="02" label="Selected work" title="Work and things I build for fun.">
+        <ProjectGrid projects={projects} />
       </Section>
 
       <Section id="principles" index="03" label="How I work" title="Five principles.">

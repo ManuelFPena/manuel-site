@@ -8,6 +8,7 @@ import { isHidden, showPrivate, Text } from "@/components/Text";
 import { isTodo, type CaseSection, type Figure } from "@/content/types";
 import Image from "next/image";
 import { ProjectCover } from "@/components/ProjectCover";
+import { SauceMap } from "@/components/sauces/SauceMap";
 import { getPersonalProject, kindLabel, personalProjects, projects, type PersonalProject } from "@/content/projects";
 import { caseStudies, getCaseStudy } from "@/content/work";
 
@@ -136,8 +137,13 @@ function PersonalProjectPage({ p }: { p: PersonalProject }) {
           </div>
         </dl>
 
-        {/* With a gallery, the screenshots below do the job; otherwise show the cover here. */}
-        {!p.gallery?.length && (
+        {/* A working embed comes first; with a gallery, the screenshots below do the job; otherwise the cover. */}
+        {p.embed === "book-of-sauces" && (
+          <div className="mt-8">
+            <SauceMap />
+          </div>
+        )}
+        {!p.embed && !p.gallery?.length && (
           <div className="mt-8 max-w-[860px] border border-rule bg-surface p-2.5 sm:p-3">
             <ProjectCover project={p} priority />
           </div>

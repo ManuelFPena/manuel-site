@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { CoverTone, ProjectCard } from "@/content/projects";
+import { SauceMapThumb } from "./sauces/SauceMapThumb";
 
 /** Muted colour pairs. Both themes use them as-is: covers read like printed tiles. */
 const toneStyle: Record<CoverTone, { bg: string; ink: string; soft: string }> = {
@@ -14,6 +15,7 @@ const toneStyle: Record<CoverTone, { bg: string; ink: string; soft: string }> = 
  * tile with the project's mark, a fine grid and a few circles.
  */
 export function ProjectCover({ project, priority = false }: { project: ProjectCard; priority?: boolean }) {
+  if (project.interactive === "book-of-sauces") return <SauceMapThumb />;
   if (project.image) {
     return (
       <Image

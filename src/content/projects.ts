@@ -32,6 +32,8 @@ export type ProjectCard = {
   tone?: CoverTone;
   /** Short word or two drawn large on a generated cover. */
   mark?: string;
+  /** A live, animated cover instead of an image. */
+  interactive?: "book-of-sauces";
 };
 
 export type PersonalProject = ProjectCard & {
@@ -42,6 +44,8 @@ export type PersonalProject = ProjectCard & {
   /** Extra screenshots shown under the sections. */
   gallery?: { src: StaticImageData; alt: string; caption: string }[];
   link?: { href: string; label: string };
+  /** A working version of the project embedded on its page. */
+  embed?: "book-of-sauces";
 };
 
 export const personalProjects: PersonalProject[] = [
@@ -80,23 +84,38 @@ export const personalProjects: PersonalProject[] = [
   {
     slug: "book-of-sauces",
     kind: "personal",
-    title: "Book of Sauces",
-    summary: "A personal collection of sauces, written down so they can be repeated and improved.",
-    year: todo("Year(s)"),
-    tone: "clay",
-    mark: "Sauces",
-    tags: ["Cooking", "Writing"],
+    title: "The Book of Sauces",
+    summary: "Sauces of the world, connected by the ingredients they share. An interactive map.",
+    year: "2026",
+    interactive: "book-of-sauces",
+    embed: "book-of-sauces",
+    tags: ["Data visualization", "Cooking", "Prototype"],
     sections: [
       {
         label: "What it is",
-        body: todo("One or two lines: what the book is, how many sauces, what format (notebook, site, PDF)"),
+        body: "A book of 11 sauces from around the world, drawn as one map of the 30 ingredients they share.",
       },
       {
-        label: "Why",
-        draft: true,
-        body: "Cooking works like product iteration: constraints, small experiments, and notes on what changed.",
+        label: "How it works",
+        body: [
+          "Each circle is an ingredient. Open a sauce to outline its ingredients.",
+          "Select an ingredient to see every sauce that uses it, from pesto to harissa.",
+          "Circles can be sized by market size, price or availability.",
+        ],
       },
-      { label: "What's next", body: todo("Optional: photos, a favourite sauce, or a link") },
+      {
+        label: "What I built",
+        body: [
+          "A recipe database with a cited source for every sauce.",
+          "An export step that turns the recipes into a network of shared ingredients.",
+          "The interactive map above, rebuilt here from the prototype.",
+        ],
+      },
+      {
+        label: "Status",
+        body: "Prototype. The size values are illustrative placeholders, not real data yet.",
+      },
+      { label: "Built with", body: "Python, SQLite and D3.js in the prototype; React and SVG on this page." },
     ],
   },
 ];

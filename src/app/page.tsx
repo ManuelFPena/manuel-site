@@ -42,8 +42,8 @@ export default function HomePage() {
               <em className="italic text-accent">consumer insight.</em>
             </h1>
             <p className="mt-6 max-w-[52ch] text-[1.02rem] leading-relaxed text-muted sm:text-[1.1rem]">
-              Ten years in analytics and e-commerce, at Under Armour, adidas and Versuni. Now I own e-commerce martech
-              and measurement. I turn fragmented data and unclear problems into products teams can ship and measure.
+              Ten years across analytics, data products and e-commerce. I turn fragmented data and unclear problems into
+              products teams can ship and measure.
             </p>
             <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[0.78rem] uppercase tracking-[0.06em]" aria-label="Contact">
               {[

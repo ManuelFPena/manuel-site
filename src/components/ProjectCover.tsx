@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { CoverTone, ProjectCard } from "@/content/projects";
+import { FieldStudyThumb } from "./instruments/FieldStudyThumb";
 import { SauceMapThumb } from "./sauces/SauceMapThumb";
 
 /** Muted colour pairs. Both themes use them as-is: covers read like printed tiles. */
@@ -16,6 +17,7 @@ const toneStyle: Record<CoverTone, { bg: string; ink: string; soft: string }> = 
  */
 export function ProjectCover({ project, priority = false }: { project: ProjectCard; priority?: boolean }) {
   if (project.interactive === "book-of-sauces") return <SauceMapThumb />;
+  if (project.interactive === "visual-instruments") return <FieldStudyThumb />;
   if (project.image) {
     return (
       <Image

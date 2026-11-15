@@ -55,7 +55,7 @@ export const principles = [
 
 export const fluency: { group: string; items: Copy[] }[] = [
   {
-    group: "Analysis",
+    group: "Methods",
     items: [
       "Funnels and conversion",
       "Segmentation and cohorts",
@@ -72,7 +72,7 @@ export const fluency: { group: string; items: Copy[] }[] = [
     items: ["CDP and CRM", "REST APIs and OpenAPI", "AWS", "CMS and content platforms", "Data pipelines"],
   },
   {
-    group: "Tools",
+    group: "Data & tools",
     items: ["SQL", "Python", "GA4", "Adobe Analytics", "Amplitude", "AppsFlyer", "BigQuery", "Databricks", "Athena and S3", "Power BI", "SAP Datasphere"],
   },
 ];

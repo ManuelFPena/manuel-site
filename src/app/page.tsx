@@ -1,7 +1,6 @@
 import { ArrowLink } from "@/components/ArrowLink";
 import { Container } from "@/components/Container";
 import { Evolution } from "@/components/Evolution";
-import { Fluency } from "@/components/Fluency";
 import { Portrait } from "@/components/Portrait";
 import { Principles } from "@/components/Principles";
 import { Section } from "@/components/Section";
@@ -104,10 +103,6 @@ export default function HomePage() {
 
       <Section id="principles" index="03" label="How I work" title="Five principles.">
         <Principles />
-      </Section>
-
-      <Section id="fluency" index="04" label="Technical fluency" title="Not an engineer. Fluent with engineers.">
-        <Fluency />
       </Section>
     </>
   );

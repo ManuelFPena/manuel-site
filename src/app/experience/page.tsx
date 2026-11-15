@@ -4,7 +4,7 @@ import { Container } from "@/components/Container";
 import { PageIntro } from "@/components/PageIntro";
 import { Tags } from "@/components/Tags";
 import { Text, TodoTag } from "@/components/Text";
-import { contact } from "@/content/site";
+import { contact, fluency } from "@/content/site";
 import { chapters, education, languages } from "@/content/experience";
 import { isTodo } from "@/content/types";
 
@@ -76,6 +76,31 @@ export default function ExperiencePage() {
                       <Text value={e.org} />
                     </p>
                   </div>
+                </div>
+              ))}
+            </div>
+          </li>
+
+          <li className="grid grid-cols-1 gap-y-4 border-t border-rule py-8 lg:grid-cols-12 lg:gap-x-12 lg:py-10">
+            <div className="lg:col-span-4">
+              <h2 className="display text-[1.5rem] leading-[1.1]">Toolkit</h2>
+            </div>
+            <div className="space-y-4 lg:col-span-8">
+              {fluency.map((g) => (
+                <div key={g.group} className="grid grid-cols-1 gap-y-1 sm:grid-cols-[9rem_1fr] sm:gap-x-6">
+                  <p className="eyebrow pt-1">{g.group}</p>
+                  <ul className="flex flex-wrap gap-x-2 gap-y-1 text-[0.95rem] text-muted" aria-label={g.group}>
+                    {g.items.map((item, i) => (
+                      <li key={i}>
+                        <Text value={item} />
+                        {i < g.items.length - 1 && (
+                          <span aria-hidden="true" className="ml-2 text-accent">
+                            ·
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>

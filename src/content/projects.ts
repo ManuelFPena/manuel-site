@@ -33,7 +33,7 @@ export type ProjectCard = {
   /** Short word or two drawn large on a generated cover. */
   mark?: string;
   /** A live, animated cover instead of an image. */
-  interactive?: "book-of-sauces";
+  interactive?: "book-of-sauces" | "visual-instruments";
 };
 
 export type PersonalProject = ProjectCard & {
@@ -56,6 +56,7 @@ export const personalProjects: PersonalProject[] = [
     summary: "Small browser instruments where sound and image move together. Knobs, steps and particles.",
     year: todo("Year(s)"),
     image: { src: fieldStudy, alt: "Field Study: a tape-deck panel with four knobs driving a generative particle field" },
+    interactive: "visual-instruments",
     tags: ["Creative coding", "Audio", "Generative visuals"],
     sections: [
       {

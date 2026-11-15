@@ -7,39 +7,38 @@ import { Section } from "@/components/Section";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "From D2C e-commerce analytics to owning a global consumer-care platform.",
+    "From business intelligence and digital analytics to owning e-commerce martech and measurement at Versuni.",
   alternates: { canonical: "/about/" },
 };
 
 const today = [
   {
-    area: "Direction",
-    items: ["Vision, strategy, roadmap", "Backlog and prioritization", "Delivery with engineering"],
+    area: "Domain",
+    items: ["Own-commerce martech", "Onboarding and retention", "Long-term customer value"],
   },
   {
-    area: "Experience",
-    items: ["Customer journeys", "Consumer-care experiences", "Content platforms"],
+    area: "Data",
+    items: ["App, CRM and e-commerce signals", "One customer view", "Channel attribution"],
   },
   {
-    area: "Platform",
-    items: ["Integrations, APIs, data flows", "Localization and market needs", "Compliance"],
+    area: "Delivery",
+    items: ["With engineering, UX and data engineering", "Pre- and post-purchase journeys", "Lifecycle journeys"],
   },
   {
     area: "Evidence",
-    items: ["Key metrics", "Diagnosing issues from data", "Reporting impact"],
+    items: ["Experiments", "Behavioral data", "Product decisions"],
   },
 ];
 
 const partners = [
   "Engineering",
   "UX & Design",
+  "Data engineering",
+  "CRM",
   "Marketing",
+  "Commercial",
   "Consumer Care",
-  "Operations",
-  "Service",
-  "Legal & Compliance",
-  "Data",
-  "Local markets",
+  "EU markets",
 ];
 
 export default function AboutPage() {
@@ -50,19 +49,20 @@ export default function AboutPage() {
         title="Between the business, the consumer, the data and the technology."
         aside={<Portrait size={160} priority className="h-[88px]! w-[88px]! sm:h-[120px]! sm:w-[120px]! lg:h-[160px]! lg:w-[160px]!" />}
       >
-        <p>Ten years in analytics, e-commerce and consumer insight. Now I own a global digital platform.</p>
+        <p>Ten years in analytics and e-commerce. Now a Product Manager working where data, systems and growth meet.</p>
       </PageIntro>
 
       <Section index="01" label="Short version">
         <div className="prose-body max-w-[60ch] sm:text-[1.05rem]">
           <p>
-            I started in <strong>D2C e-commerce analytics</strong>: funnels, search, campaigns and CRM across millions of
-            sessions. The question kept shifting from <em>what happened</em> to{" "}
-            <strong>what should we do about it</strong>. That pulled me into product.
+            I started in <strong>business intelligence</strong>, then moved into <strong>digital analytics</strong> at Under
+            Armour and adidas: DTC revenue, app lifecycle, segmentation and user states. The question kept shifting from{" "}
+            <em>what happened</em> to <strong>what should we do about it</strong>.
           </p>
           <p>
-            Today I am <strong>Product Owner for Home.ID at Versuni</strong>, a global consumer-care platform for Philips
-            appliances. Analytics is still how I decide.
+            At Versuni I first led an insights squad and acted as Product Manager for internal data products. Today I am{" "}
+            <strong>Global Product Owner for E-Commerce Martech Measurement</strong>. I turn fragmented data and unclear
+            problems into capabilities teams can build on.
           </p>
         </div>
       </Section>

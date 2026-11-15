@@ -2,13 +2,13 @@ import { todo, type Copy, type Todo } from "./types";
 
 export const site = {
   name: "Manuel Fernández",
-  role: "Product Owner, Home.ID at Versuni",
+  role: "Global Product Owner, E-Commerce Martech Measurement at Versuni",
   location: "Amsterdam",
   /** Set NEXT_PUBLIC_SITE_URL in production so canonical and OG URLs are absolute. */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
   title: "Manuel Fernández · Product, e-commerce and analytics",
   description:
-    "Product Owner for Home.ID at Versuni. I build digital products with data, technology and consumer insight. Background in D2C e-commerce analytics. Amsterdam.",
+    "Global Product Owner, E-Commerce Martech Measurement at Versuni. Product Manager working where data, systems and growth meet. Before: data products at Versuni, digital analytics at adidas and Under Armour. Amsterdam.",
   /**
    * Stealth mode (default). Tells search engines not to index the site and blocks
    * all crawlers in robots.txt. Set NEXT_PUBLIC_PUBLIC=1 only when ready to go public.
@@ -39,10 +39,10 @@ export const contact: {
 
 /** The central narrative, used on Home and About. */
 export const evolution = [
-  { step: "01", label: "Analytics", text: "Measuring D2C e-commerce: funnels, search, campaigns, CRM." },
-  { step: "02", label: "Consumer behavior", text: "From what happened to why people drop off." },
-  { step: "03", label: "Product decisions", text: "Turning evidence into priorities, requirements and tests." },
-  { step: "04", label: "Product ownership", text: "A global platform, end to end." },
+  { step: "01", label: "Business intelligence", text: "Performance and segmentation analytics at Banreservas." },
+  { step: "02", label: "Digital analytics", text: "DTC revenue at Under Armour; app lifecycle and user states at adidas." },
+  { step: "03", label: "Data products", text: "Product Manager for internal data products at Versuni: models, KPIs, tooling." },
+  { step: "04", label: "Product ownership", text: "Global Product Owner for e-commerce martech and measurement." },
 ];
 
 export const principles = [
@@ -60,6 +60,8 @@ export const fluency: { group: string; items: Copy[] }[] = [
       "Funnels and conversion",
       "Segmentation and cohorts",
       "A/B tests, pre/post, diff-in-diff",
+      "Data modeling and KPI frameworks",
+      "Lifecycle segmentation and user states",
       "Attribution",
       "Transactional and geo analysis",
       "P&L and finance analysis",
@@ -67,10 +69,10 @@ export const fluency: { group: string; items: Copy[] }[] = [
   },
   {
     group: "Platforms",
-    items: ["REST APIs and OpenAPI", "AWS", "CMS and content platforms", "Data pipelines"],
+    items: ["CDP and CRM", "REST APIs and OpenAPI", "AWS", "CMS and content platforms", "Data pipelines"],
   },
   {
     group: "Tools",
-    items: ["SQL", "Python", "GA4", "BigQuery", "Databricks", "Athena and S3", "Power BI", "SAP Datasphere"],
+    items: ["SQL", "Python", "GA4", "Adobe Analytics", "Amplitude", "AppsFlyer", "BigQuery", "Databricks", "Athena and S3", "Power BI", "SAP Datasphere"],
   },
 ];

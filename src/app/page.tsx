@@ -14,7 +14,7 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: site.name,
-  jobTitle: "Product Owner",
+  jobTitle: "Global Product Owner, E-Commerce Martech Measurement",
   worksFor: { "@type": "Organization", name: "Versuni" },
   address: { "@type": "PostalAddress", addressLocality: "Amsterdam", addressCountry: "NL" },
   url: site.url,
@@ -43,8 +43,8 @@ export default function HomePage() {
               <em className="italic text-accent">consumer insight.</em>
             </h1>
             <p className="mt-6 max-w-[52ch] text-[1.02rem] leading-relaxed text-muted sm:text-[1.1rem]">
-              Ten years in analytics and e-commerce. Now I own a global consumer-care platform. I turn unclear problems
-              into products teams can ship and measure.
+              Ten years in analytics and e-commerce, at Under Armour, adidas and Versuni. Now I own e-commerce martech
+              and measurement. I turn fragmented data and unclear problems into products teams can ship and measure.
             </p>
             <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[0.78rem] uppercase tracking-[0.06em]" aria-label="Contact">
               {[

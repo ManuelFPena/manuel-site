@@ -17,8 +17,8 @@ export const caseStudies: CaseStudy[] = [
     title: "A global consumer-care platform",
     summary: "Owning Home.ID: post-purchase support for Philips appliances, across many markets.",
     tags: ["Product ownership", "Consumer care", "Platform"],
-    role: "Product Owner",
-    period: todo("Years, e.g. 2023 to present"),
+    role: "Global Product Owner, E-Commerce Martech Measurement",
+    period: "2025 – present",
     problem: {
       body: "After buying an appliance, people need answers fast. The answers sit across many systems and differ by country.",
     },
@@ -86,16 +86,16 @@ export const caseStudies: CaseStudy[] = [
     title: "E-commerce analytics & optimization",
     summary: "Finding the friction that matters in large D2C journeys.",
     tags: ["D2C e-commerce", "Funnel analysis", "Experimentation"],
-    role: todo("Confirm exact title, e.g. Lead, D2C E-commerce Insights & Analytics"),
-    period: todo("Years"),
+    role: "Sr. Insights Squad Manager D2C, Versuni",
+    period: "2023 – 2025",
     problem: {
       body: "Large D2C journeys produce lots of data and few clear answers. The hard part is knowing which friction matters.",
     },
     context: {
-      body: "D2C e-commerce across millions of sessions: funnels, campaigns, CRM and commercial performance.",
+      body: "D2C growth across EU markets: funnels, campaigns, CRM and commercial performance, across owned and paid channels.",
     },
     myRole: {
-      body: "I led D2C insights and analytics, connecting behavioral and commercial data to the teams who could act.",
+      body: "I led a cross-functional analytics and data product squad, and acted as Product Manager for internal data products: data models, KPIs and tooling.",
     },
     approach: {
       body: [

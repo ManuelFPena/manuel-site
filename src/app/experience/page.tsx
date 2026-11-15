@@ -5,13 +5,13 @@ import { PageIntro } from "@/components/PageIntro";
 import { Tags } from "@/components/Tags";
 import { Text, TodoTag } from "@/components/Text";
 import { contact } from "@/content/site";
-import { chapters, education } from "@/content/experience";
+import { chapters, education, languages } from "@/content/experience";
 import { isTodo } from "@/content/types";
 
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "Career timeline of Manuel Fernández: consumer insight and CRM, D2C e-commerce analytics, and product ownership of a global consumer-care platform.",
+    "Career timeline of Manuel Fernández: business intelligence, digital analytics at Under Armour and adidas, data products and product ownership at Versuni.",
   alternates: { canonical: "/experience/" },
 };
 
@@ -19,7 +19,7 @@ export default function ExperiencePage() {
   return (
     <>
       <PageIntro label="Experience" title="Three chapters, one direction.">
-        <p>Understanding consumers, then how they buy, then the product they use.</p>
+        <p>From business intelligence, to digital analytics and data products, to product ownership. Newest first.</p>
       </PageIntro>
 
       <Container className="pb-14 lg:pb-20">
@@ -34,7 +34,7 @@ export default function ExperiencePage() {
                 <p className="mt-1.5 max-w-[30ch] text-[0.92rem] leading-relaxed text-muted">{ch.theme}</p>
               </div>
 
-              <div className="lg:col-span-8">
+              <div className="space-y-8 lg:col-span-8">
                 {ch.roles.map((r, ri) => (
                   <div key={ri} className="grid grid-cols-1 gap-y-2 sm:grid-cols-[9rem_1fr] sm:gap-x-6">
                     <p className="eyebrow pt-1.5">
@@ -62,7 +62,7 @@ export default function ExperiencePage() {
             <div className="lg:col-span-4">
               <h2 className="display text-[1.5rem] leading-[1.1]">Education</h2>
             </div>
-            <div className="lg:col-span-8">
+            <div className="space-y-6 lg:col-span-8">
               {education.map((e, i) => (
                 <div key={i} className="grid grid-cols-1 gap-y-2 sm:grid-cols-[9rem_1fr] sm:gap-x-6">
                   <p className="eyebrow pt-1.5">
@@ -78,6 +78,26 @@ export default function ExperiencePage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </li>
+
+          <li className="grid grid-cols-1 gap-y-4 border-t border-rule py-8 lg:grid-cols-12 lg:gap-x-12 lg:py-10">
+            <div className="lg:col-span-4">
+              <h2 className="display text-[1.5rem] leading-[1.1]">Languages</h2>
+            </div>
+            <div className="lg:col-span-8">
+              <ul className="flex flex-wrap gap-x-2 gap-y-1.5 text-[0.98rem]" aria-label="Languages">
+                {languages.map((l, i) => (
+                  <li key={l}>
+                    {l}
+                    {i < languages.length - 1 && (
+                      <span aria-hidden="true" className="ml-2 text-accent">
+                        ·
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
             </div>
           </li>
         </ol>

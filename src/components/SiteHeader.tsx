@@ -26,6 +26,7 @@ export function SiteHeader() {
   const isActive = (href: string) => href.startsWith("/") && pathname.startsWith(href);
 
   return (
+    <>
     <header className="sticky top-0 z-40 border-b border-rule/60 bg-bg/85 backdrop-blur-md supports-[backdrop-filter]:bg-bg/75">
       <a
         href="#main"
@@ -68,32 +69,33 @@ export function SiteHeader() {
         </button>
       </Container>
 
-      {/* Mobile menu */}
-      <div
-        id="mobile-nav"
-        hidden={!open}
-        className="fixed inset-x-0 bottom-0 top-14 z-40 bg-bg sm:top-16 md:hidden"
-      >
-        <Container>
-          <nav aria-label="Mobile">
-            <ul className="divide-y divide-rule border-t border-rule">
-              {nav.map((item, i) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    aria-current={isActive(item.href) ? "page" : undefined}
-                    className="flex items-baseline justify-between py-4"
-                  >
-                    <span className="display text-[1.6rem] leading-none">{item.label}</span>
-                    <span className="eyebrow">0{i + 1}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </Container>
-      </div>
     </header>
+
+      {/* Mobile menu */}
+    <div
+      id="mobile-nav"
+      hidden={!open}
+      className="fixed inset-x-0 bottom-0 top-14 z-50 overflow-y-auto bg-bg sm:top-16 md:hidden"
+    >
+      <Container>
+        <nav aria-label="Mobile">
+          <ul className="divide-y divide-rule border-t border-rule">
+            {nav.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                  className={`flex items-baseline py-4 ${isActive(item.href) ? "text-accent" : "text-ink"}`}
+                >
+                  <span className="display text-[1.6rem] leading-none">{item.label}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </Container>
+    </div>
+    </>
   );
 }

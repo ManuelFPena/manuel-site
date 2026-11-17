@@ -14,7 +14,7 @@ export function TodoTag({ note }: { note: string }) {
   if (hideTodos) return null;
   return (
     <span
-      className="inline-flex items-baseline gap-1.5 rounded-sm bg-todo-bg px-1.5 py-0.5 font-mono text-[0.72rem] leading-snug tracking-normal text-todo normal-case"
+      className="inline-flex items-baseline gap-1.5 rounded-sm bg-todo-bg px-1.5 py-0.5 font-mono text-[0.8rem] leading-snug tracking-normal text-todo normal-case"
       title="Placeholder: replace in src/content"
     >
       <span aria-hidden="true" className="font-semibold">Input needed</span>
@@ -29,7 +29,7 @@ export function PrivateMark({ children }: { children: React.ReactNode }) {
   return (
     <span className="rounded-sm bg-private-bg px-1 text-ink outline-1 outline-dashed outline-private" title="Private: local only, not in builds">
       {children}
-      <span className="ml-1.5 font-mono text-[0.65rem] uppercase tracking-[0.06em] text-private">Private</span>
+      <span className="ml-1.5 font-mono text-[0.72rem] text-private">Private</span>
     </span>
   );
 }

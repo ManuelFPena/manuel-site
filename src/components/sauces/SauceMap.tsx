@@ -290,9 +290,9 @@ export function SauceMap() {
                   </span>
                 )}
               </p>
-              <svg width="262" height="62" aria-hidden="true" className="shrink-0">
+              <svg width="232" height="62" aria-hidden="true" className="shrink-0">
                 {(() => {
-                  let x = 24;
+                  let x = 6;
                   const out = legendSamples.map((v) => {
                     const r = radiusFor(v, metric);
                     const cx = x + r;

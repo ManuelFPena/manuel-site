@@ -86,3 +86,16 @@ All copy lives in `src/content/`:
 ## Confidentiality rules
 
 No confidential figures, internal architecture, stakeholder names, internal URLs, incidents or proprietary data. Outcomes use public-safe or relative indicators only.
+
+
+## Deploy on Cloudflare Pages (password protected)
+
+The site is a static export with a password gate in `functions/_middleware.js`.
+Every request goes through the gate; the right password sets a 30-day cookie.
+
+1. Cloudflare dashboard > Workers & Pages > Create > Pages > Connect to Git, pick this repo.
+2. Build settings: framework preset **None**, build command `npm run build`, output directory `out`.
+3. Settings > Variables and Secrets: add `SITE_PASSWORD` (type **Secret**) for Production and Preview.
+4. Redeploy. Without `SITE_PASSWORD` the site stays locked.
+
+Change the password any time by editing the variable and redeploying; everyone is then asked again.

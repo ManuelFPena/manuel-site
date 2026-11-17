@@ -23,12 +23,6 @@ export function WorkList({ headingLevel = "h3" }: { headingLevel?: "h2" | "h3" }
               <p className="mt-1.5 max-w-[56ch] text-[0.95rem] leading-relaxed text-muted">{c.summary}</p>
               <Tags items={c.tags} className="mt-3" />
             </div>
-            <span
-              aria-hidden="true"
-              className="pt-1 text-[1.1rem] text-faint transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent"
-            >
-              →
-            </span>
           </Link>
         </li>
       ))}

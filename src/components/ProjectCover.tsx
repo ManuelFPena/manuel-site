@@ -5,10 +5,10 @@ import { SauceMapThumb } from "./sauces/SauceMapThumb";
 
 /** Muted colour pairs. Both themes use them as-is: covers read like printed tiles. */
 const toneStyle: Record<CoverTone, { bg: string; ink: string; soft: string }> = {
-  green: { bg: "#1f3d33", ink: "#e9efe9", soft: "#86c7ab" },
-  sand: { bg: "#e7dcc6", ink: "#2b261c", soft: "#a8916a" },
-  clay: { bg: "#8f4a36", ink: "#f6e9de", soft: "#e2b49a" },
-  ink: { bg: "#1c1b17", ink: "#ecebe4", soft: "#8d897e" },
+  green: { bg: "#272643", ink: "#e3f6f5", soft: "#bae8e8" },
+  sand: { bg: "#e3f6f5", ink: "#272643", soft: "#2c698d" },
+  clay: { bg: "#bae8e8", ink: "#272643", soft: "#2c698d" },
+  ink: { bg: "#2c698d", ink: "#ffffff", soft: "#bae8e8" },
 };
 
 /**
@@ -50,7 +50,7 @@ export function ProjectCover({ project, priority = false }: { project: ProjectCa
         <circle cx="318" cy="92" r="22" fill={t.soft} fillOpacity="0.35" />
         <circle cx="262" cy="150" r="9" fill={t.soft} fillOpacity="0.6" />
       </svg>
-      <span className="relative font-mono text-[0.68rem] uppercase tracking-[0.1em] opacity-70">
+      <span className="relative font-mono text-[0.8rem] opacity-70">
         {project.kind === "personal" ? "Personal" : "Work"}
       </span>
       <span className="display relative text-[2.4rem] leading-none sm:text-[2.8rem]">{project.mark ?? project.title}</span>

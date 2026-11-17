@@ -1,6 +1,11 @@
 import type { StaticImageData } from "next/image";
 import fieldStudy from "../../public/projects/visual-instruments-field-study.jpg";
 import sequencer from "../../public/projects/visual-instruments-sequencer.jpg";
+import serviceCenters from "../../public/projects/service-center-locator.jpg";
+import homeIdLanding from "../../public/projects/home-id-landing.jpg";
+import appUserStates from "../../public/projects/app-user-states.jpg";
+import productCoverage from "../../public/projects/product-coverage.jpg";
+import searchLabel from "../../public/projects/search-label.jpg";
 import { todo, type CaseSection, type Copy } from "./types";
 import { caseStudies } from "./work";
 
@@ -123,12 +128,36 @@ export const personalProjects: PersonalProject[] = [
 
 /** Commercial case studies as cards. Generated covers until real visuals are added. */
 const tones: CoverTone[] = ["green", "sand", "ink", "clay"];
+/** Real screenshots for work cards, by case-study slug. Others keep a generated cover. */
+const workCovers: Record<string, ProjectCard["image"]> = {
+  "search-product-discovery": {
+    src: searchLabel,
+    alt: "Home.ID support search in Italian: the query BAR returns a list of products with name, image and product code",
+  },
+  "app-user-states": {
+    src: appUserStates,
+    alt: "Six columns of dots, sparse for churned users and dense for loyal users",
+  },
+  "product-coverage-pim": {
+    src: productCoverage,
+    alt: "A grid of product tiles: a few covered before, most added from one product source",
+  },
+  "home-id": {
+    src: homeIdLanding,
+    alt: "Home.ID landing page: \u201cMy account\u201d with buttons to create an account or log in",
+  },
+  "service-center-locator": {
+    src: serviceCenters,
+    alt: "Home.ID service-centre locator: a map of Italy with repair-centre pins beside a searchable list",
+  },
+};
 const workCards: ProjectCard[] = caseStudies.map((c, i) => ({
   slug: c.slug,
   kind: "work",
   title: c.title,
   summary: c.summary,
   year: c.period,
+  image: workCovers[c.slug],
   tone: tones[i % tones.length],
   mark: c.index,
 }));

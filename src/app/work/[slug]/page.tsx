@@ -74,7 +74,7 @@ function Figures({ figures }: { figures: Figure[] }) {
           <dd className="display text-[2rem] leading-none text-ink">{f.value}</dd>
           <dd className="mt-2 text-[0.92rem] leading-snug text-muted">
             {f.label}
-            {f.private && <span className="ml-2 font-mono text-[0.65rem] uppercase text-private">Private</span>}
+            {f.private && <span className="ml-2 font-mono text-[0.72rem] text-private">Private</span>}
           </dd>
         </div>
       ))}
@@ -96,7 +96,7 @@ function NextLinks({ slug }: { slug: string }) {
       <Link href={`/work/${next.slug}/`} className="group sm:text-right">
         <span className="eyebrow block">Next project</span>
         <span className="display mt-1.5 block text-[1.25rem] leading-tight transition-colors group-hover:text-accent">
-          {next.title} <span aria-hidden="true" className="text-accent">→</span>
+          {next.title}
         </span>
       </Link>
     </div>

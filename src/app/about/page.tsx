@@ -19,8 +19,8 @@ const bring = [
   { area: "Delivery", text: "Work with engineering, design and data to ship in small steps." },
 ];
 
-/** Companies framed as clients: who I have done this work for. Details live on Experience. */
-const clients = [
+/** Employers so far. Details live on Experience. */
+const employers = [
   { name: "Versuni", sector: "Home appliances" },
   { name: "adidas", sector: "Sportswear" },
   { name: "Under Armour", sector: "Sportswear" },
@@ -46,8 +46,8 @@ export default function AboutPage() {
             it worked.
           </p>
           <p>
-            I have done this for a bank, two sportswear brands and a home-appliance company. I see each as a client: they
-            bring the problem, I bring the way of working.
+            I have done this in-house, for a bank, two sportswear brands and a home-appliance company. I work for my
+            employer the way I would for a client: they bring the problem, I bring the way of working.
           </p>
         </div>
       </Section>
@@ -66,9 +66,9 @@ export default function AboutPage() {
         </dl>
       </Section>
 
-      <Section index="03" label="Clients so far">
-        <ul className="grid grid-cols-2 gap-x-8 gap-y-4 sm:grid-cols-4" aria-label="Clients so far">
-          {clients.map((c) => (
+      <Section index="03" label="Where I have worked">
+        <ul className="grid grid-cols-2 gap-x-8 gap-y-4 sm:grid-cols-4" aria-label="Where I have worked">
+          {employers.map((c) => (
             <li key={c.name}>
               <p className="display text-[1.2rem] leading-tight">{c.name}</p>
               <p className="eyebrow mt-1">{c.sector}</p>

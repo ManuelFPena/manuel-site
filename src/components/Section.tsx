@@ -28,8 +28,6 @@ export function Section({
       <Container className="grid grid-cols-1 gap-y-5 py-12 sm:py-14 lg:grid-cols-12 lg:gap-x-12 lg:py-16">
         <div className="lg:col-span-3">
           <p className="eyebrow lg:sticky lg:top-24 lg:pt-2">
-            {index && <span className="text-accent">{index}</span>}
-            {index && <span aria-hidden="true"> / </span>}
             {label}
           </p>
         </div>

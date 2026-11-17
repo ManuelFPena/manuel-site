@@ -5,29 +5,11 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { site } from "@/content/site";
 import "./globals.css";
 
-const inter = localFont({
-  src: "./fonts/Inter.woff2",
-  variable: "--font-inter",
-  weight: "100 900",
-  display: "swap",
-});
-
-const newsreader = localFont({
-  src: [
-    { path: "./fonts/Newsreader.woff2", style: "normal" },
-    { path: "./fonts/Newsreader-Italic.woff2", style: "italic" },
-  ],
-  variable: "--font-newsreader",
+const brand = localFont({
+  src: "./fonts/BricolageGrotesque.woff2",
+  variable: "--font-brand",
   weight: "200 800",
   display: "swap",
-});
-
-const mono = localFont({
-  src: "./fonts/JetBrainsMono.woff2",
-  variable: "--font-mono-face",
-  weight: "100 800",
-  display: "swap",
-  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -60,7 +42,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${newsreader.variable} ${mono.variable}`}>
+    <html lang="en" className={brand.variable}>
       <body className="flex min-h-dvh flex-col">
         <SiteHeader />
         <main id="main" className="flex-1">

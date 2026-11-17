@@ -1,0 +1,71 @@
+Case studies removed from the site on 17 Nov 2026 (no decision, outcome or cover yet).
+To restore, paste a block back into the caseStudies array in src/content/work.ts.
+
+  {
+    slug: "ecommerce-analytics-optimization",
+    index: "03",
+    title: "E-commerce analytics & optimization",
+    summary: "Finding the friction that matters in large D2C journeys.",
+    tags: ["D2C e-commerce", "Funnel analysis", "Experimentation"],
+    role: "Sr. Insights Squad Manager D2C, Versuni",
+    period: "2023 – 2025",
+    problem: {
+      body: "Large D2C journeys produce lots of data and few clear answers. The hard part is knowing which friction matters.",
+    },
+    context: {
+      body: "D2C growth across EU markets: funnels, campaigns, CRM and commercial performance, across owned and paid channels.",
+    },
+    myRole: {
+      body: "I led a cross-functional analytics and data product squad, and acted as Product Manager for internal data products: data models, KPIs and tooling.",
+    },
+    approach: {
+      body: [
+        "Funnel analysis to find where journeys break.",
+        "Segmentation to see who behaves differently.",
+        "Experiments to test changes instead of debating them.",
+      ],
+    },
+    decision: {
+      body: todo("An example where the analysis changed a priority or a plan"),
+    },
+    outcome: {
+      body: todo("What changed as a result. Public-safe or relative indicators only"),
+    },
+  },
+
+  {
+    slug: "measurement-data-products",
+    index: "04",
+    title: "Measurement as a data product",
+    summary: "Turning one-off campaign analysis into a standard every market could use.",
+    tags: ["Data products", "Measurement", "KPIs"],
+    role: "Senior Decision Scientist, Digital Analytics & Data Products, adidas",
+    period: "2022 – 2023",
+    problem: {
+      body: "Every campaign and promotion was measured a little differently. Results could not be compared, so the same debates repeated.",
+    },
+    context: {
+      body: [
+        "Growth Revenue Development team, campaigns and promotions across markets.",
+        "Behavioral and commercial data feeding marketing and product strategy.",
+        todo("Optional: public-safe scale, e.g. number of markets or campaigns covered"),
+      ],
+    },
+    myRole: {
+      body: "I built the standard measurement for campaigns and promotions, and treated it as a product with users, not a report.",
+    },
+    approach: {
+      draft: true,
+      body: [
+        "Agree one set of KPI definitions before building anything.",
+        "Package the logic as a reusable model and dashboard, not a slide.",
+        "Onboard markets as users and improve from their feedback.",
+      ],
+    },
+    decision: {
+      body: todo("One trade-off: e.g. what you standardized versus left flexible per market, and why"),
+    },
+    outcome: {
+      body: todo("What changed: adoption, faster readouts, a decision it unlocked. Public-safe or relative indicators only"),
+    },
+  },

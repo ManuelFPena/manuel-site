@@ -6,14 +6,15 @@
    Dark mode follows the visitor's system setting; no toggle needed.
    ------------------------------------------------------------------ */
 :root {
-  --bg: #f7f6f2;
-  --surface: #efede6;
-  --ink: #16150f;
-  --muted: #57544b;
-  --faint: #6f6b61;
-  --rule: #dcd8cc;
-  --accent: #1f5e4b;
-  --accent-soft: #e2ece6;
+  /* Palette: navy #272643, white #ffffff, mint #e3f6f5, aqua #bae8e8, steel blue #2c698d */
+  --bg: #ffffff;
+  --surface: #e3f6f5;
+  --ink: #272643;
+  --muted: #4a4a68;
+  --faint: #5d6080;
+  --rule: #d2e6e6;
+  --accent: #2c698d;
+  --accent-soft: #bae8e8;
   --todo: #8a5a00;
   --todo-bg: #fbf1d9;
   --private: #b4233c;
@@ -23,14 +24,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #11110e;
-    --surface: #1a1a16;
-    --ink: #ecebe4;
-    --muted: #aaa69b;
-    --faint: #8d897e;
-    --rule: #2d2c26;
-    --accent: #86c7ab;
-    --accent-soft: #1b2a24;
+    --bg: #1c1b31;
+    --surface: #272643;
+    --ink: #e3f6f5;
+    --muted: #b3cfd2;
+    --faint: #93b3b9;
+    --rule: #36355a;
+    --accent: #bae8e8;
+    --accent-soft: #2c698d;
     --todo: #f0c56a;
     --todo-bg: #2a2416;
     --private: #ff8fa3;
@@ -53,9 +54,9 @@
   --color-private: var(--private);
   --color-private-bg: var(--private-bg);
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
-  --font-mono: var(--font-mono-face), ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: var(--font-brand), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-brand), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-brand), ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
@@ -68,14 +69,13 @@
     background: var(--bg);
     color: var(--ink);
     font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
     overflow-wrap: break-word;
     -moz-osx-font-smoothing: grayscale;
   }
   ::selection {
-    background: var(--accent);
-    color: var(--bg);
+    background: var(--accent-soft);
+    color: var(--ink);
   }
   :focus-visible {
     outline: 2px solid var(--accent);
@@ -91,20 +91,20 @@
 @layer components {
   /* Small uppercase mono label used for section markers and metadata */
   .eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
     line-height: 1.4;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--faint);
+    color: var(--accent);
   }
 
   /* Display headings in the serif */
   .display {
-    font-family: var(--font-serif);
-    font-weight: 380;
-    letter-spacing: -0.02em;
-    font-variation-settings: "opsz" 72;
+    font-family: var(--font-sans);
+    font-weight: 640;
+    letter-spacing: -0.035em;
+    line-height: 1.04;
+    font-variation-settings: "opsz" 96;
   }
 
   /* Long-form text */

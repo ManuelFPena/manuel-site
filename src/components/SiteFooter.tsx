@@ -22,7 +22,7 @@ export function SiteFooter() {
         </div>
         <div className="lg:col-span-9">
           <h2 id="contact-heading" className="display max-w-[24ch] text-[1.6rem] leading-[1.15] sm:text-[1.9rem]">
-            Working on a hard product problem? <span className="italic text-accent">Let&rsquo;s talk.</span>
+            Working on a hard product problem? Let&rsquo;s talk.
           </h2>
           <dl className="mt-8 grid grid-cols-1 gap-y-5 border-t border-rule pt-6 sm:grid-cols-3 sm:gap-x-8">
             {links.map(({ label, value, kind }) => (

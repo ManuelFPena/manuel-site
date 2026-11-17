@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { kindLabel, type ProjectCard, type ProjectKind } from "@/content/projects";
 import { ProjectCover } from "./ProjectCover";
+import { Text } from "./Text";
 
 type Filter = "all" | ProjectKind;
 
@@ -43,7 +44,7 @@ export function ProjectGrid({
                 type="button"
                 aria-pressed={active}
                 onClick={() => setFilter(f.value)}
-                className={`rounded-sm border px-3 py-1.5 font-mono text-[0.72rem] uppercase tracking-[0.06em] transition-colors ${
+                className={`rounded-sm border px-3 py-1.5 font-mono text-[0.8rem] transition-colors ${
                   active ? "border-ink bg-ink text-bg" : "border-rule text-muted hover:border-ink hover:text-ink"
                 }`}
               >
@@ -67,8 +68,11 @@ export function ProjectGrid({
               </div>
               <div className="mt-4 flex items-baseline justify-between gap-4">
                 <span className={`eyebrow ${p.kind === "personal" ? "text-accent" : ""}`}>{kindLabel[p.kind]}</span>
-                {/* Years show on cards only once filled in; "Input needed" stays on the project page. */}
-                {typeof p.year === "string" && <span className="eyebrow shrink-0">{p.year}</span>}
+                {p.year && (
+                  <span className="eyebrow shrink-0">
+                    <Text value={p.year} />
+                  </span>
+                )}
               </div>
               <Heading className="display mt-2 text-[1.3rem] leading-[1.15] transition-colors group-hover:text-accent sm:text-[1.45rem]">
                 {p.title}
@@ -76,9 +80,6 @@ export function ProjectGrid({
               <p className="mt-1.5 max-w-[48ch] text-[0.95rem] leading-relaxed text-muted">{p.summary}</p>
               <span className="mt-3 inline-flex items-center gap-2 text-[0.88rem] font-medium text-ink">
                 <span className="link-underline pb-0.5">View project</span>
-                <span aria-hidden="true" className="text-accent transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
               </span>
             </Link>
           </li>

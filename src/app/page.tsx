@@ -39,13 +39,13 @@ export default function HomePage() {
           <div className="lg:col-span-8">
             <h1 className="display max-w-[18ch] text-[2.1rem] leading-[1.08] sm:text-[2.75rem] lg:text-[3.4rem]">
               I build digital products with data, technology and{" "}
-              <em className="italic text-accent">consumer insight.</em>
+              consumer insight.
             </h1>
             <p className="mt-6 max-w-[52ch] text-[1.02rem] leading-relaxed text-muted sm:text-[1.1rem]">
               Ten years across analytics, data products and e-commerce. I turn fragmented data and unclear problems into
               products teams can ship and measure.
             </p>
-            <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[0.78rem] uppercase tracking-[0.06em]" aria-label="Contact">
+            <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[0.85rem]" aria-label="Contact">
               {[
                 { label: "Email", value: contact.email, href: (v: string) => `mailto:${v}` },
                 { label: "LinkedIn", value: contact.linkedin, href: (v: string) => v },

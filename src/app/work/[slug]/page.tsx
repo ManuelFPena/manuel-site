@@ -11,6 +11,8 @@ import { ProjectCover } from "@/components/ProjectCover";
 import { SauceMap } from "@/components/sauces/SauceMap";
 import { getPersonalProject, kindLabel, personalProjects, projects, type PersonalProject } from "@/content/projects";
 import { caseStudies, getCaseStudy } from "@/content/work";
+import { caseMedia, type CaseMedia } from "@/content/screens";
+import { BrowserFrame } from "@/components/BrowserFrame";
 
 type Params = { slug: string };
 
@@ -206,6 +208,40 @@ function PersonalProjectPage({ p }: { p: PersonalProject }) {
   );
 }
 
+function CaseScreens({ media }: { media: CaseMedia }) {
+  const [lead, ...rest] = media.screens;
+  return (
+    <section aria-label="In the product" className="pb-10 sm:pb-14">
+      <figure className="max-w-[960px]">
+        <BrowserFrame src={lead.src} alt={lead.alt} url={lead.url} priority />
+        <figcaption className="mt-3 max-w-[60ch] text-[0.9rem] leading-relaxed text-muted">{lead.caption}</figcaption>
+      </figure>
+      {rest.length > 0 && (
+        <ul className="mt-8 grid max-w-[960px] grid-cols-1 gap-8 sm:grid-cols-2">
+          {rest.map((s) => (
+            <li key={s.caption}>
+              <figure>
+                <BrowserFrame src={s.src} alt={s.alt} url={s.url} sizes="(min-width: 640px) 480px, 100vw" />
+                <figcaption className="mt-3 text-[0.9rem] leading-relaxed text-muted">{s.caption}</figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
+      )}
+      {media.links && media.links.length > 0 && (
+        <p className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+          {media.links.map((l) => (
+            <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="link-underline pb-0.5 text-[0.95rem] font-medium text-accent">
+              {l.label} <span aria-hidden="true">↗</span>
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          ))}
+        </p>
+      )}
+    </section>
+  );
+}
+
 export default async function CaseStudyPage({ params }: { params: Promise<Params> }) {
   const { slug } = await params;
   const personal = getPersonalProject(slug);
@@ -251,6 +287,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
       </Container>
 
       <Container className="pb-14 lg:pb-20">
+        {caseMedia[c.slug] && <CaseScreens media={caseMedia[c.slug]} />}
         <ol className="border-b border-rule">
           {sections.map(({ key, label }, n) => {
             const section = c[key];

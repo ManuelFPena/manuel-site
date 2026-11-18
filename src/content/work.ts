@@ -92,8 +92,51 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: "search-product-discovery",
+    slug: "checkout-auto-registration",
     index: "03",
+    title: "Registered at checkout",
+    summary: "One tick at checkout registers the product for warranty on Home.ID. Philips webshops in Europe and Singapore: registrations up 36%.",
+    tags: ["Registration", "E-commerce", "Post-purchase"],
+    role: "Product Owner, Digital Experience (Home.ID), Versuni",
+    period: todo("Year it went live"),
+    problem: {
+      body: "Registration is how we know who owns which product, and it unlocks warranty and support. But asking people to register later, in a separate step, loses most of them.",
+    },
+    context: {
+      body: [
+        "Philips home-appliance webshops in Europe and Singapore.",
+        "Registering on Home.ID confirms the warranty and gives the owner manuals, tips and support for their product.",
+      ],
+    },
+    myRole: {
+      draft: true,
+      body: "I defined the flow and the hand-off from checkout to Home.ID, and delivered it with the e-commerce and engineering teams.",
+    },
+    approach: {
+      body: [
+        "Ask at the moment of purchase: one checkbox at checkout to register the product for warranty.",
+        "A ticked box sends the purchased product to Home.ID, which registers it to the buyer.",
+        "The buyer finds the product in Home.ID with the warranty already confirmed. No form, no model number to look up.",
+      ],
+    },
+    decision: {
+      draft: true,
+      body: "An opt-in checkbox, not silent registration of every order. Explicit consent keeps it compliant and trusted, and 8 in 10 buyers still choose it.",
+    },
+    outcome: {
+      body: [
+        "Product registrations up 36%.",
+        "8 in 10 buyers tick the box at checkout.",
+      ],
+    },
+    figures: [
+      { value: "+36%", label: "product registrations" },
+      { value: "8 in 10", label: "buyers tick the box at checkout" },
+    ],
+  },
+  {
+    slug: "search-product-discovery",
+    index: "04",
     title: "Search that reads the label",
     summary: "Making Home.ID support search accept product codes the way people type them: straight from the label.",
     tags: ["Search", "Behavioural analysis", "Product discovery"],
@@ -135,7 +178,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "service-center-locator",
-    index: "04",
+    index: "05",
     title: "Find a repair centre near you",
     summary: "A self-service repair map on Home.ID: fewer calls to consumer care, more appliances repaired.",
     tags: ["Consumer care", "Self-service", "Repair"],
@@ -182,7 +225,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "app-user-states",
-    index: "05",
+    index: "06",
     title: "Who actually uses the app",
     summary: "A user-state framework for the HomeID app: from churned to loyal, each group with its own action and metric.",
     tags: ["App analytics", "Retention", "Segmentation"],
@@ -230,7 +273,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "product-coverage-pim",
-    index: "06",
+    index: "07",
     title: "Every product, ready to register",
     summary: "Connecting Home.ID to the company\u2019s product information system: four times the products covered, without thinning the documentation.",
     tags: ["Product data", "Compliance", "Platform"],

@@ -12,9 +12,21 @@ import homeIdLanding from "../../public/projects/home-id-landing.jpg";
  * Only public pages. Never link to a URL that carries a personal or registration ID.
  */
 export type Screen = { src: StaticImageData; alt: string; caption: string; url: string };
-export type CaseMedia = { screens: Screen[]; links?: { href: string; label: string }[] };
+export type CaseMedia = {
+  screens?: Screen[];
+  links?: { href: string; label: string }[];
+  /** A table or diagram built in HTML, shown in an app window before any screenshots. */
+  widget?: { kind: "user-states"; title: string; caption: string };
+};
 
 export const caseMedia: Record<string, CaseMedia> = {
+  "app-user-states": {
+    widget: {
+      kind: "user-states",
+      title: "HomeID app \u00b7 User-state framework",
+      caption: "Six states, from churned to loyal. Each one has its own objective, actions and success metrics.",
+    },
+  },
   "home-id": {
     screens: [
       {

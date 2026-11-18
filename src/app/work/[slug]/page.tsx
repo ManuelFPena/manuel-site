@@ -12,7 +12,8 @@ import { SauceMap } from "@/components/sauces/SauceMap";
 import { getPersonalProject, kindLabel, personalProjects, projects, type PersonalProject } from "@/content/projects";
 import { caseStudies, getCaseStudy } from "@/content/work";
 import { caseMedia, type CaseMedia } from "@/content/screens";
-import { BrowserFrame } from "@/components/BrowserFrame";
+import { AppWindow, BrowserFrame } from "@/components/BrowserFrame";
+import { UserStateFramework } from "@/components/UserStateFramework";
 
 type Params = { slug: string };
 
@@ -209,13 +210,23 @@ function PersonalProjectPage({ p }: { p: PersonalProject }) {
 }
 
 function CaseScreens({ media }: { media: CaseMedia }) {
-  const [lead, ...rest] = media.screens;
+  const [lead, ...rest] = media.screens ?? [];
   return (
     <section aria-label="In the product" className="pb-10 sm:pb-14">
-      <figure className="max-w-[960px]">
-        <BrowserFrame src={lead.src} alt={lead.alt} url={lead.url} priority />
-        <figcaption className="mt-3 max-w-[60ch] text-[0.9rem] leading-relaxed text-muted">{lead.caption}</figcaption>
-      </figure>
+      {media.widget && (
+        <figure className="mb-8 max-w-[1040px]">
+          <AppWindow title={media.widget.title}>
+            {media.widget.kind === "user-states" && <UserStateFramework />}
+          </AppWindow>
+          <figcaption className="mt-3 max-w-[60ch] text-[0.9rem] leading-relaxed text-muted">{media.widget.caption}</figcaption>
+        </figure>
+      )}
+      {lead && (
+        <figure className="max-w-[960px]">
+          <BrowserFrame src={lead.src} alt={lead.alt} url={lead.url} priority />
+          <figcaption className="mt-3 max-w-[60ch] text-[0.9rem] leading-relaxed text-muted">{lead.caption}</figcaption>
+        </figure>
+      )}
       {rest.length > 0 && (
         <ul className="mt-8 grid max-w-[960px] grid-cols-1 gap-8 sm:grid-cols-2">
           {rest.map((s) => (

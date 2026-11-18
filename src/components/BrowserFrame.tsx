@@ -42,3 +42,21 @@ export function BrowserFrame({
     </div>
   );
 }
+
+/** The same macOS window with a title instead of an address bar, for content built in HTML. */
+export function AppWindow({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div className="overflow-hidden rounded-[10px] border border-rule bg-bg shadow-[0_1px_2px_rgba(39,38,67,0.06),0_18px_40px_-18px_rgba(39,38,67,0.35)]">
+      <div className="flex items-center gap-3 border-b border-rule bg-surface px-3 py-2 sm:px-4">
+        <div className="flex shrink-0 gap-1.5" aria-hidden="true">
+          <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
+        </div>
+        <p className="mx-auto truncate text-[0.75rem] font-semibold text-muted">{title}</p>
+        <div className="w-[42px] shrink-0" aria-hidden="true" />
+      </div>
+      {children}
+    </div>
+  );
+}

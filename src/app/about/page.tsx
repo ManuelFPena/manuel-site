@@ -37,7 +37,7 @@ const employers: { name: string; sector: string; logo?: Logo; brands?: { logos: 
   },
   { name: "adidas", sector: "Sportswear", logo: { src: "/logos/adidas.svg", ratio: 74.4 / 44, label: "adidas" } },
   { name: "Under Armour", sector: "Sportswear", logo: { src: "/logos/under-armour.png", ratio: 800 / 455, label: "Under Armour" } },
-  { name: "Banreservas", sector: "Banking" },
+  { name: "Banreservas", sector: "Banking", logo: { src: "/logos/banreservas.png", ratio: 944 / 220, label: "Banreservas" } },
 ];
 
 export default function AboutPage() {

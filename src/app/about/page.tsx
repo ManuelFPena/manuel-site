@@ -25,7 +25,7 @@ type Logo = { src: string; ratio: number; label: string };
 const employers: { name: string; sector: string; logo?: Logo; brands?: { logos: Logo[]; note: string } }[] = [
   {
     name: "Versuni",
-    sector: "Post-purchase & D2C",
+    sector: "Post-purchase, D2C & app analytics",
     logo: { src: "/logos/versuni.png", ratio: 544 / 96, label: "Versuni" },
     brands: {
       logos: [

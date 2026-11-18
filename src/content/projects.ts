@@ -60,7 +60,7 @@ export const personalProjects: PersonalProject[] = [
     kind: "personal",
     title: "Visual instruments",
     summary: "Small browser instruments where sound and image move together. Knobs, steps and particles.",
-    year: todo("Year(s)"),
+    year: "2025",
     image: { src: fieldStudy, alt: "Field Study: a tape-deck panel with four knobs driving a generative particle field" },
     interactive: "visual-instruments",
     tags: ["Creative coding", "Audio", "Generative visuals"],

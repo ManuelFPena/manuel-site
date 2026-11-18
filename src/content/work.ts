@@ -140,7 +140,7 @@ export const caseStudies: CaseStudy[] = [
     summary: "A self-service repair map on Home.ID: fewer calls to consumer care, more appliances repaired.",
     tags: ["Consumer care", "Self-service", "Repair"],
     role: "Product Manager, Versuni",
-    period: todo("Year it launched"),
+    period: "2026",
     problem: {
       body: "When an appliance breaks, the first question is: who near me can fix it? The answer was a flat PDF list. Hard to search, so people called consumer care, or gave up and replaced it.",
     },

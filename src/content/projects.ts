@@ -6,6 +6,7 @@ import homeIdLanding from "../../public/projects/home-id-landing.jpg";
 import appUserStates from "../../public/projects/app-user-states.jpg";
 import productCoverage from "../../public/projects/product-coverage.jpg";
 import searchLabel from "../../public/projects/search-label.jpg";
+import satisfactionGuarantee from "../../public/projects/satisfaction-guarantee.jpg";
 import { todo, type CaseSection, type Copy } from "./types";
 import { caseStudies } from "./work";
 
@@ -130,6 +131,10 @@ export const personalProjects: PersonalProject[] = [
 const tones: CoverTone[] = ["green", "sand", "ink", "clay"];
 /** Real screenshots for work cards, by case-study slug. Others keep a generated cover. */
 const workCovers: Record<string, ProjectCard["image"]> = {
+  "satisfaction-guarantee": {
+    src: satisfactionGuarantee,
+    alt: "Home.ID campaign page for the Philips satisfaction guarantee in Sweden, with buttons to create an account or log in",
+  },
   "search-product-discovery": {
     src: searchLabel,
     alt: "Home.ID support search in Italian: the query BAR returns a list of products with name, image and product code",

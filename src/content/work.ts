@@ -227,6 +227,47 @@ export const caseStudies: CaseStudy[] = [
     },
     figures: [{ value: "4\u00d7", label: "more products available for registration and support, within two weeks of release" }],
   },
+  {
+    slug: "satisfaction-guarantee",
+    index: "06",
+    title: "A 60-day money-back guarantee, built on registration",
+    summary: "Running the Philips satisfaction guarantee through Home.ID: register the product, check eligibility, claim in one flow. Live in Poland and the Nordics.",
+    tags: ["Campaigns", "Post-purchase", "Market personalization"],
+    role: "Product Owner, Digital Experience (Home.ID), Versuni",
+    period: todo("Year(s) it went live"),
+    problem: {
+      body: "A money-back guarantee only works if claiming is simple and eligibility can be trusted. Handled by email and paper receipts, it is slow for consumers and hard to verify for the business.",
+    },
+    context: {
+      body: [
+        "Philips satisfaction guarantee: try an eligible product at home for up to 60 days, return it for a refund if not satisfied.",
+        "Live in Poland and the Nordics, with a list of 97 eligible models across coffee, garment care, kitchen, air, floor and pet care (Sweden).",
+        "Part of market personalization on Home.ID: one platform, offers that differ per market, like extended warranties in Asia.",
+      ],
+    },
+    myRole: {
+      draft: true,
+      body: "I deployed the use case on Home.ID for each market: the campaign landing page, the eligibility rule at product registration, and the claim form.",
+    },
+    approach: {
+      body: [
+        "One landing page per market with three steps: log in or create a Home.ID account, register the product, fill in the form.",
+        "Eligibility is set at registration: when a registered model is on the campaign list, the product is marked eligible and the claim form opens from it.",
+        "The form takes contact details, the store, proof of purchase and marketing consent in one go.",
+      ],
+    },
+    decision: {
+      draft: true,
+      body: "Make product registration the way into the guarantee, instead of a standalone claim form. Eligibility is checked automatically, the business gets a verified owner and purchase date, and every claim also grows registrations and marketing opt-in.",
+    },
+    outcome: {
+      body: todo("What the campaign drove: claims, registrations or opt-ins; markets live. Relative numbers only"),
+    },
+    figures: [
+      { value: "60", label: "days to try the product at home" },
+      { value: "97", label: "eligible models (Sweden)" },
+    ],
+  },
 ];
 
 export const getCaseStudy = (slug: string) => caseStudies.find((c) => c.slug === slug);

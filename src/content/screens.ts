@@ -6,6 +6,7 @@ import serviceMap from "../../public/projects/screens/service-centers-map.jpg";
 import productPage from "../../public/projects/screens/home-id-product-page.jpg";
 import supportSearch from "../../public/projects/screens/support-search.jpg";
 import homeIdLanding from "../../public/projects/home-id-landing.jpg";
+import checkoutRegister from "../../public/projects/screens/checkout-register.jpg";
 
 /**
  * Screenshots and live links for case studies, by slug.
@@ -20,6 +21,16 @@ export type CaseMedia = {
 };
 
 export const caseMedia: Record<string, CaseMedia> = {
+  "checkout-auto-registration": {
+    screens: [
+      {
+        src: checkoutRegister,
+        alt: "Philips webshop checkout in Dutch, delivery step: a ticked box labelled Registreer je product, to register the product for warranty and support",
+        caption: "Dutch webshop, delivery step: \u201cRegister my product to confirm my warranty and get tips and support in one place.\u201d Buying a gift? Untick it, so the recipient can register.",
+        url: "https://www.home-appliances.philips/nl/nl/checkout/delivery-address",
+      },
+    ],
+  },
   "app-user-states": {
     widget: {
       kind: "user-states",

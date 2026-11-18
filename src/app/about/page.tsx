@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LogoMark } from "@/components/LogoMark";
 import { ArrowLink } from "@/components/ArrowLink";
 import { PageIntro } from "@/components/PageIntro";
 import { Portrait } from "@/components/Portrait";
@@ -19,11 +20,23 @@ const bring = [
   { area: "Delivery", text: "Work with engineering, design and data to ship in small steps." },
 ];
 
-/** Employers so far. Details live on Experience. */
-const employers = [
-  { name: "Versuni", sector: "Home appliances" },
-  { name: "adidas", sector: "Sportswear" },
-  { name: "Under Armour", sector: "Sportswear" },
+/** Employers so far. Logos are drawn in the text colour (LogoMark). Details live on Experience. */
+type Logo = { src: string; ratio: number; label: string };
+const employers: { name: string; sector: string; logo?: Logo; brands?: { logos: Logo[]; note: string } }[] = [
+  {
+    name: "Versuni",
+    sector: "Home appliances",
+    brands: {
+      logos: [
+        { src: "/logos/philips.svg", ratio: 350.6 / 64, label: "Philips" },
+        { src: "/logos/saeco.png", ratio: 206 / 41, label: "Saeco" },
+        { src: "/logos/senseo.png", ratio: 462 / 401, label: "Senseo" },
+      ],
+      note: "Philips (licensed), Saeco, Senseo",
+    },
+  },
+  { name: "adidas", sector: "Sportswear", logo: { src: "/logos/adidas.svg", ratio: 74.4 / 44, label: "adidas" } },
+  { name: "Under Armour", sector: "Sportswear", logo: { src: "/logos/under-armour.png", ratio: 800 / 455, label: "Under Armour" } },
   { name: "Banreservas", sector: "Banking" },
 ];
 
@@ -67,11 +80,30 @@ export default function AboutPage() {
       </Section>
 
       <Section index="03" label="Where I have worked">
-        <ul className="grid grid-cols-2 gap-x-8 gap-y-4 sm:grid-cols-4" aria-label="Where I have worked">
+        <ul className="grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-[2.3fr_1fr_1fr_1fr]" aria-label="Where I have worked">
           {employers.map((c) => (
-            <li key={c.name}>
-              <p className="display text-[1.2rem] leading-tight">{c.name}</p>
-              <p className="eyebrow mt-1">{c.sector}</p>
+            <li key={c.name} className="flex flex-col">
+              <div className="flex h-9 items-center text-ink">
+                {c.logo ? (
+                  <LogoMark src={c.logo.src} ratio={c.logo.ratio} height={30} label={c.logo.label} />
+                ) : (
+                  <p className="display text-[1.35rem] leading-none">{c.name}</p>
+                )}
+              </div>
+              <p className="eyebrow mt-2">
+                {c.logo ? `${c.name} · ` : ""}
+                {c.sector}
+              </p>
+              {c.brands && (
+                <div className="mt-3">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-ink">
+                    {c.brands.logos.map((l) => (
+                      <LogoMark key={l.label} src={l.src} ratio={l.ratio} height={l.ratio < 2 ? 32 : 16} label={l.label} />
+                    ))}
+                  </div>
+                  <p className="mt-2 text-[0.8rem] text-faint">Brands: {c.brands.note}</p>
+                </div>
+              )}
             </li>
           ))}
         </ul>

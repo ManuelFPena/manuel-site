@@ -25,7 +25,7 @@ type Logo = { src: string; ratio: number; label: string };
 const employers: { name: string; sector: string; logo?: Logo; brands?: { logos: Logo[]; note: string } }[] = [
   {
     name: "Versuni",
-    sector: "Home appliances",
+    sector: "Post-purchase & D2C",
     logo: { src: "/logos/versuni.png", ratio: 544 / 96, label: "Versuni" },
     brands: {
       logos: [
@@ -36,9 +36,9 @@ const employers: { name: string; sector: string; logo?: Logo; brands?: { logos: 
       note: "Philips (licensed), Saeco, Senseo",
     },
   },
-  { name: "adidas", sector: "Sportswear", logo: { src: "/logos/adidas.svg", ratio: 74.4 / 44, label: "adidas" } },
-  { name: "Under Armour", sector: "Sportswear", logo: { src: "/logos/under-armour.png", ratio: 800 / 455, label: "Under Armour" } },
-  { name: "Banreservas", sector: "Banking", logo: { src: "/logos/banreservas.png", ratio: 564 / 525, label: "Banreservas" } },
+  { name: "adidas", sector: "App & e\u2011commerce analytics", logo: { src: "/logos/adidas.svg", ratio: 74.4 / 44, label: "adidas" } },
+  { name: "Under Armour", sector: "DTC e\u2011commerce analytics", logo: { src: "/logos/under-armour.png", ratio: 800 / 455, label: "Under Armour" } },
+  { name: "Banreservas", sector: "Banking BI", logo: { src: "/logos/banreservas.png", ratio: 564 / 525, label: "Banreservas" } },
 ];
 
 export default function AboutPage() {
@@ -91,10 +91,8 @@ export default function AboutPage() {
                   <p className="display text-[1.35rem] leading-none">{c.name}</p>
                 )}
               </div>
-              <p className="eyebrow mt-2">
-                {c.logo ? `${c.name} · ` : ""}
-                {c.sector}
-              </p>
+              <p className="eyebrow mt-2">{c.name}</p>
+              <p className="mt-0.5 text-[0.85rem] leading-snug text-muted">{c.sector}</p>
               {c.brands && (
                 <div className="mt-3">
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-ink">

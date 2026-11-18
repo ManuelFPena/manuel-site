@@ -17,7 +17,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Home.ID: everything after the purchase",
     summary: "The post-purchase platform for Philips home appliances: register, get answers, fix a problem, find a repair. One platform, many countries.",
     tags: ["Product ownership", "Post-purchase", "Platform"],
-    role: "Global Product Owner, Versuni",
+    role: "Product Owner, Digital Experience (Home.ID), Versuni",
     period: "2025 \u2013 present",
     problem: {
       body: "After buying an appliance, people need answers fast: how to use it, how to fix it, what the warranty covers, who can repair it. Those answers sat across many systems and differed by country.",
@@ -57,7 +57,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Search that reads the label",
     summary: "Making Home.ID support search accept product codes the way people type them: straight from the label.",
     tags: ["Search", "Behavioural analysis", "Product discovery"],
-    role: "Global Product Owner, Versuni",
+    role: "Product Owner, Digital Experience (Home.ID), Versuni",
     period: "2026",
     problem: {
       body: "The support homepage is driven by search, but only about one in four searches ended in a click. Many people type the full product code from the label, like NA352/00, while search only understood the short form, NA352.",
@@ -91,7 +91,7 @@ export const caseStudies: CaseStudy[] = [
         priv("Q3 targets: results shown per search 77% to 85%; click rate after results 32% to 35%"),
       ],
     },
-    figures: [{ value: "~10%", label: "of product searchers type the full code with \u201c/\u201d", private: true }],
+    figures: [{ value: "~10%", label: "of product searchers type the full code with \u201c/\u201d" }],
   },
   {
     slug: "service-center-locator",
@@ -180,12 +180,12 @@ export const caseStudies: CaseStudy[] = [
       body: [
         "A shared language for the app base: product, CRM and markets plan against the same six states.",
         priv("Loyal share: 6% of all users vs 25% of connected-airfryer owners; churned 71% vs 44%"),
-        priv("Nov 2025 vs Nov 2024: activated users +14%, loyal +21%, engaged +11%"),
+        "Year on year (Nov 2025 vs Nov 2024): loyal users +21%, engaged +11%, activated +14%.",
       ],
     },
     figures: [
       { value: "6", label: "user states, from churned to loyal" },
-      { value: "4\u00d7", label: "loyal share among connected-appliance owners", private: true },
+      { value: "4\u00d7", label: "more likely to be loyal: connected-appliance owners" },
     ],
   },
   {
@@ -194,7 +194,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Every product, ready to register",
     summary: "Connecting Home.ID to the company\u2019s product information system: four times the products covered, without thinning the documentation.",
     tags: ["Product data", "Compliance", "Platform"],
-    role: "Global Product Owner, Versuni",
+    role: "Product Owner, Digital Experience (Home.ID), Versuni",
     period: "2025 \u2013 2026",
     problem: {
       body: "People can only register a product or find its manual if Home.ID knows the product. Product data and documents were scattered and duplicated, so many products were missing: a legal and consumer-care risk.",
@@ -226,7 +226,7 @@ export const caseStudies: CaseStudy[] = [
         priv("Finished products covered: 1,319 to 5,275 in two weeks (09 to 23 Feb 2026). Latin America +357%, APAC +261%, Europe +211%. Depth 3.5 to 3.2 documents per product"),
       ],
     },
-    figures: [{ value: "4\u00d7", label: "finished products covered after release", private: true }],
+    figures: [{ value: "4\u00d7", label: "more products available for registration and support, within two weeks of release" }],
   },
 ];
 

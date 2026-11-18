@@ -2,13 +2,13 @@ import { todo, type Copy, type Todo } from "./types";
 
 export const site = {
   name: "Manuel Fernández",
-  role: "Global Product Owner, E-Commerce Martech Measurement at Versuni",
+  role: "Product Owner, Digital Experience (Home.ID) at Versuni",
   location: "Amsterdam",
   /** Set NEXT_PUBLIC_SITE_URL in production so canonical and OG URLs are absolute. */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
   title: "Manuel Fernández · Product, e-commerce and analytics",
   description:
-    "Global Product Owner, E-Commerce Martech Measurement at Versuni. Product Manager working where data, systems and growth meet. Before: data products at Versuni, digital analytics at adidas and Under Armour. Amsterdam.",
+    "Product Owner, Digital Experience (Home.ID) at Versuni. Product Manager working where data, systems and growth meet. Before: data products at Versuni, digital analytics at adidas and Under Armour. Amsterdam.",
   /**
    * Stealth mode (default). Tells search engines not to index the site and blocks
    * all crawlers in robots.txt. Set NEXT_PUBLIC_PUBLIC=1 only when ready to go public.
@@ -42,7 +42,7 @@ export const evolution = [
   { step: "01", label: "Business intelligence", text: "Performance and segmentation analytics at Banreservas." },
   { step: "02", label: "Digital analytics", text: "DTC revenue at Under Armour; app lifecycle and user states at adidas." },
   { step: "03", label: "Data products", text: "Product Manager for internal data products at Versuni: models, KPIs, tooling." },
-  { step: "04", label: "Product ownership", text: "Global Product Owner for e-commerce martech and measurement." },
+  { step: "04", label: "Product ownership", text: "Product Owner for Home.ID, the post-purchase platform in about 40 countries." },
 ];
 
 export const principles = [

@@ -47,9 +47,19 @@ export default function ExperiencePage() {
                       <p className="mt-0.5 text-[0.95rem] text-muted">
                         <Text value={r.org} />
                       </p>
-                      <p className="mt-2 max-w-[56ch] text-[0.95rem] leading-relaxed text-muted">
-                        <Text value={r.line} />
-                      </p>
+                      {r.bullets ? (
+                        <ul className="mt-2 max-w-[60ch] list-disc space-y-1.5 pl-4 text-[0.95rem] leading-relaxed text-muted marker:text-accent">
+                          {r.bullets.map((b, bi) => (
+                            <li key={bi}>
+                              <Text value={b} />
+                            </li>
+                          ))}
+                        </ul>
+                      ) : r.line ? (
+                        <p className="mt-2 max-w-[56ch] text-[0.95rem] leading-relaxed text-muted">
+                          <Text value={r.line} />
+                        </p>
+                      ) : null}
                       <Tags items={r.focus} className="mt-3" />
                     </div>
                   </div>

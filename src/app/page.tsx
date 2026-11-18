@@ -13,7 +13,7 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: site.name,
-  jobTitle: "Global Product Owner, E-Commerce Martech Measurement",
+  jobTitle: "Product Owner, Digital Experience (Home.ID)",
   worksFor: { "@type": "Organization", name: "Versuni" },
   address: { "@type": "PostalAddress", addressLocality: "Amsterdam", addressCountry: "NL" },
   url: site.url,

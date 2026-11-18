@@ -26,6 +26,7 @@ const employers: { name: string; sector: string; logo?: Logo; brands?: { logos: 
   {
     name: "Versuni",
     sector: "Home appliances",
+    logo: { src: "/logos/versuni.png", ratio: 544 / 96, label: "Versuni" },
     brands: {
       logos: [
         { src: "/logos/philips.svg", ratio: 350.6 / 64, label: "Philips" },
@@ -85,7 +86,7 @@ export default function AboutPage() {
             <li key={c.name} className="flex flex-col">
               <div className="flex h-9 items-center text-ink">
                 {c.logo ? (
-                  <LogoMark src={c.logo.src} ratio={c.logo.ratio} height={c.logo.ratio < 1.3 ? 36 : 30} label={c.logo.label} />
+                  <LogoMark src={c.logo.src} ratio={c.logo.ratio} height={c.logo.ratio < 1.3 ? 36 : c.logo.ratio > 4 ? 22 : 30} label={c.logo.label} />
                 ) : (
                   <p className="display text-[1.35rem] leading-none">{c.name}</p>
                 )}

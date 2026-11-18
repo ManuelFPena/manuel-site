@@ -134,7 +134,7 @@ const tones: CoverTone[] = ["green", "sand", "ink", "clay"];
 const workCovers: Record<string, ProjectCard["image"]> = {
   "checkout-auto-registration": {
     src: checkoutAutoRegistration,
-    alt: "A checkout with the box Register my product for warranty on Home.ID ticked, and the product shown as registered in Home.ID",
+    alt: "Philips webshop checkout in the Netherlands: the ticked box Registreer je product, and the result: +36% product registrations",
   },
   "satisfaction-guarantee": {
     src: satisfactionGuarantee,

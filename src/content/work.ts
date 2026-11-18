@@ -234,14 +234,14 @@ export const caseStudies: CaseStudy[] = [
     summary: "Running the Philips satisfaction guarantee through Home.ID: register the product, check eligibility, claim in one flow. Live in Poland and the Nordics.",
     tags: ["Campaigns", "Post-purchase", "Market personalization"],
     role: "Product Owner, Digital Experience (Home.ID), Versuni",
-    period: todo("Year(s) it went live"),
+    period: "2026",
     problem: {
       body: "A money-back guarantee only works if claiming is simple and eligibility can be trusted. Handled by email and paper receipts, it is slow for consumers and hard to verify for the business.",
     },
     context: {
       body: [
         "Philips satisfaction guarantee: try an eligible product at home for up to 60 days, return it for a refund if not satisfied.",
-        "Live in Poland and the Nordics, with a list of 97 eligible models across coffee, garment care, kitchen, air, floor and pet care (Sweden).",
+        "Live in Poland and the Nordics since September 2026, with 97 eligible models across coffee, garment care, kitchen, air, floor and pet care (Sweden).",
         "Part of market personalization on Home.ID: one platform, offers that differ per market, like extended warranties in Asia.",
       ],
     },

@@ -95,7 +95,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "checkout-auto-registration",
     index: "03",
     title: "Registered at checkout",
-    summary: "One tick at checkout registers the product for warranty on Home.ID. Philips webshops in Europe and Singapore: registrations up 36%.",
+    summary: "One tick at checkout registers the product for warranty on Home.ID. Live on Philips webshops in 19 countries: registrations up 36%.",
     tags: ["Registration", "E-commerce", "Post-purchase"],
     role: "Product Owner, Digital Experience (Home.ID), Versuni",
     period: todo("Year it went live"),
@@ -104,7 +104,7 @@ export const caseStudies: CaseStudy[] = [
     },
     context: {
       body: [
-        "Philips home-appliance webshops in Europe and Singapore.",
+        "Philips home-appliance webshops in 19 countries: 17 in Europe, plus Singapore and the United States.",
         "Registering on Home.ID confirms the warranty and gives the owner manuals, tips and support for their product.",
       ],
     },
@@ -132,6 +132,7 @@ export const caseStudies: CaseStudy[] = [
     figures: [
       { value: "+36%", label: "product registrations" },
       { value: "8 in 10", label: "buyers tick the box at checkout" },
+      { value: "19", label: "webshops, Europe to Singapore and the US" },
     ],
   },
   {

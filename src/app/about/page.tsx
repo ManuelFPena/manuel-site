@@ -37,7 +37,7 @@ const employers: { name: string; sector: string; logo?: Logo; brands?: { logos: 
   },
   { name: "adidas", sector: "Sportswear", logo: { src: "/logos/adidas.svg", ratio: 74.4 / 44, label: "adidas" } },
   { name: "Under Armour", sector: "Sportswear", logo: { src: "/logos/under-armour.png", ratio: 800 / 455, label: "Under Armour" } },
-  { name: "Banreservas", sector: "Banking", logo: { src: "/logos/banreservas.png", ratio: 944 / 220, label: "Banreservas" } },
+  { name: "Banreservas", sector: "Banking", logo: { src: "/logos/banreservas.png", ratio: 564 / 525, label: "Banreservas" } },
 ];
 
 export default function AboutPage() {
@@ -85,7 +85,7 @@ export default function AboutPage() {
             <li key={c.name} className="flex flex-col">
               <div className="flex h-9 items-center text-ink">
                 {c.logo ? (
-                  <LogoMark src={c.logo.src} ratio={c.logo.ratio} height={30} label={c.logo.label} />
+                  <LogoMark src={c.logo.src} ratio={c.logo.ratio} height={c.logo.ratio < 1.3 ? 36 : 30} label={c.logo.label} />
                 ) : (
                   <p className="display text-[1.35rem] leading-none">{c.name}</p>
                 )}

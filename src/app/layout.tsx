@@ -5,10 +5,11 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { site } from "@/content/site";
 import "./globals.css";
 
+/** Overused Grotesk (SIL OFL 1.1, RandomMaerks), variable 300 to 900. */
 const brand = localFont({
-  src: "./fonts/BricolageGrotesque.woff2",
+  src: "./fonts/OverusedGrotesk.woff2",
   variable: "--font-brand",
-  weight: "200 800",
+  weight: "300 900",
   display: "swap",
 });
 

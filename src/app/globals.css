@@ -102,9 +102,8 @@
   .display {
     font-family: var(--font-sans);
     font-weight: 640;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.03em;
     line-height: 1.04;
-    font-variation-settings: "opsz" 96;
   }
 
   /* Long-form text */

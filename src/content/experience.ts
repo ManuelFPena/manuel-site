@@ -31,7 +31,7 @@ export const chapters: Chapter[] = [
         title: "Product Owner, Digital Experience (Home.ID)",
         org: "Versuni (formerly Philips Domestic Appliances) · Amsterdam",
         bullets: [
-          "Product owner for Home.ID, the post-purchase platform for Philips home appliances in about 40 countries: registration, support, search and repair.",
+          "Product owner for Home.ID, the post-purchase platform for Philips home appliances in 57 countries and scaling: registration, support, search and repair.",
           "Connected Home.ID to the central product catalog: 4× more products available for registration and support within two weeks of release.",
           "Replaced a PDF list of repair centers with a location-based map, designed to reduce care contacts and steer consumers to repair. Launched in Italy, then rolled out further.",
           "Found that about 10% of product searchers type the full code from the label, and defined the change for search to accept every format.",

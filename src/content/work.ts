@@ -26,7 +26,7 @@ export const caseStudies: CaseStudy[] = [
       body: [
         "Home.ID is the post-purchase site and account for Philips home appliances, run by Versuni under the Philips brand licence.",
         "Every box and manual points to it: a QR code on the packaging opens the product's own page.",
-        "83 country and language versions across about 40 countries, each with its own legal, content and service-partner needs.",
+        "57 countries and scaling, each with its own language, legal, content and service-partner needs.",
       ],
     },
     myRole: {
@@ -47,8 +47,7 @@ export const caseStudies: CaseStudy[] = [
       body: todo("What changed for consumers or the business, e.g. self-service resolution, registrations, faster market launches. Public-safe or relative indicators only"),
     },
     figures: [
-      { value: "83", label: "country and language versions" },
-      { value: "~40", label: "countries" },
+      { value: "57", label: "countries, and scaling" },
     ],
   },
   {

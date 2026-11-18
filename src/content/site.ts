@@ -42,7 +42,7 @@ export const evolution = [
   { step: "01", label: "Business intelligence", text: "Performance and segmentation analytics at Banreservas." },
   { step: "02", label: "Digital analytics", text: "DTC revenue at Under Armour; app lifecycle and user states at adidas." },
   { step: "03", label: "Data products", text: "Product Manager for internal data products at Versuni: models, KPIs, tooling." },
-  { step: "04", label: "Product ownership", text: "Product Owner for Home.ID, the post-purchase platform in about 40 countries." },
+  { step: "04", label: "Product ownership", text: "Product Owner for Home.ID, the post-purchase platform in 57 countries and scaling." },
 ];
 
 export const principles = [

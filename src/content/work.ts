@@ -51,8 +51,48 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: "satisfaction-guarantee",
+    slug: "product-coverage-pim",
     index: "02",
+    title: "Every product, ready to register",
+    summary: "Connecting Home.ID to the company\u2019s product information system: four times the products covered, without thinning the documentation.",
+    tags: ["Product data", "Compliance", "Platform"],
+    role: "Product Owner, Digital Experience (Home.ID), Versuni",
+    period: "2025 \u2013 2026",
+    problem: {
+      body: "People can only register a product or find its manual if Home.ID knows the product. Product data and documents were scattered and duplicated, so many products were missing: a legal and consumer-care risk.",
+    },
+    context: {
+      body: [
+        "Care and Legal require user documentation for every product sold or supported in the last 15 years.",
+        "Home.ID and the HomeID app depend on the same product catalogue, across Europe, APAC, Latin America and the Middle East.",
+      ],
+    },
+    myRole: {
+      draft: true,
+      body: "Product Owner: framed the problem as coverage, set the staged plan, defined how coverage is measured, and delivered it with engineering sprint by sprint.",
+    },
+    approach: {
+      body: [
+        "Extend the existing portal first, to meet the legal obligation quickly.",
+        "Make the product information system (PIM) the single source of truth, with a scheduled data fetch.",
+        "Measure coverage as breadth (products and locales) plus depth (documents per product), before and after release.",
+      ],
+    },
+    decision: {
+      body: "Park the quick fix and invest in the PIM connection. The portal extension already tripled coverage, but it kept product data duplicated and manual. One governed source scales to every region automatically.",
+    },
+    outcome: {
+      body: [
+        "Coverage grew in every region, while documents per product held steady.",
+        "Foundation in place for compliance with the full product range, online and offline.",
+        priv("Finished products covered: 1,319 to 5,275 in two weeks (09 to 23 Feb 2026). Latin America +357%, APAC +261%, Europe +211%. Depth 3.5 to 3.2 documents per product"),
+      ],
+    },
+    figures: [{ value: "4\u00d7", label: "more products available for registration and support, within two weeks of release" }],
+  },
+  {
+    slug: "satisfaction-guarantee",
+    index: "03",
     title: "A 60-day money-back guarantee, built on registration",
     summary: "Running the Philips satisfaction guarantee through Home.ID: register the product, check eligibility, claim in one flow. Live in Poland and the Nordics.",
     tags: ["Campaigns", "Post-purchase", "Market personalization"],
@@ -93,7 +133,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "air-filter-1pln",
-    index: "03",
+    index: "04",
     title: "Register the purifier, unlock the filter",
     summary: "A purchase incentive on Home.ID in Poland: buy a Philips air purifier or humidifier, register it, and unlock a nearly free replacement filter.",
     tags: ["Campaigns", "Post-purchase", "Market personalization"],
@@ -134,7 +174,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "checkout-auto-registration",
-    index: "04",
+    index: "05",
     title: "Registered at checkout",
     summary: "One tick at checkout registers the product for warranty on Home.ID. Live on Philips webshops in 19 countries: registrations up 36%.",
     tags: ["Registration", "E-commerce", "Post-purchase"],
@@ -178,7 +218,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "search-product-discovery",
-    index: "05",
+    index: "06",
     title: "Search that reads the label",
     summary: "Making Home.ID support search accept product codes the way people type them: straight from the label.",
     tags: ["Search", "Behavioural analysis", "Product discovery"],
@@ -220,7 +260,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "service-center-locator",
-    index: "06",
+    index: "07",
     title: "Find a repair centre near you",
     summary: "A self-service repair map on Home.ID: fewer calls to consumer care, more appliances repaired.",
     tags: ["Consumer care", "Self-service", "Repair"],
@@ -267,7 +307,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "app-user-states",
-    index: "07",
+    index: "08",
     title: "Who actually uses the app",
     summary: "A user-state framework for the HomeID app: from churned to loyal, each group with its own action and metric.",
     tags: ["App analytics", "Retention", "Segmentation"],
@@ -312,46 +352,6 @@ export const caseStudies: CaseStudy[] = [
       { value: "6", label: "user states, from churned to loyal" },
       { value: "4\u00d7", label: "more likely to be loyal: connected-appliance owners" },
     ],
-  },
-  {
-    slug: "product-coverage-pim",
-    index: "08",
-    title: "Every product, ready to register",
-    summary: "Connecting Home.ID to the company\u2019s product information system: four times the products covered, without thinning the documentation.",
-    tags: ["Product data", "Compliance", "Platform"],
-    role: "Product Owner, Digital Experience (Home.ID), Versuni",
-    period: "2025 \u2013 2026",
-    problem: {
-      body: "People can only register a product or find its manual if Home.ID knows the product. Product data and documents were scattered and duplicated, so many products were missing: a legal and consumer-care risk.",
-    },
-    context: {
-      body: [
-        "Care and Legal require user documentation for every product sold or supported in the last 15 years.",
-        "Home.ID and the HomeID app depend on the same product catalogue, across Europe, APAC, Latin America and the Middle East.",
-      ],
-    },
-    myRole: {
-      draft: true,
-      body: "Product Owner: framed the problem as coverage, set the staged plan, defined how coverage is measured, and delivered it with engineering sprint by sprint.",
-    },
-    approach: {
-      body: [
-        "Extend the existing portal first, to meet the legal obligation quickly.",
-        "Make the product information system (PIM) the single source of truth, with a scheduled data fetch.",
-        "Measure coverage as breadth (products and locales) plus depth (documents per product), before and after release.",
-      ],
-    },
-    decision: {
-      body: "Park the quick fix and invest in the PIM connection. The portal extension already tripled coverage, but it kept product data duplicated and manual. One governed source scales to every region automatically.",
-    },
-    outcome: {
-      body: [
-        "Coverage grew in every region, while documents per product held steady.",
-        "Foundation in place for compliance with the full product range, online and offline.",
-        priv("Finished products covered: 1,319 to 5,275 in two weeks (09 to 23 Feb 2026). Latin America +357%, APAC +261%, Europe +211%. Depth 3.5 to 3.2 documents per product"),
-      ],
-    },
-    figures: [{ value: "4\u00d7", label: "more products available for registration and support, within two weeks of release" }],
   },
 ];
 

@@ -151,11 +151,11 @@ const workCovers: Record<string, ProjectCard["image"]> = {
   },
   "app-user-states": {
     src: appUserStates,
-    alt: "Six columns of dots, sparse for churned users and dense for loyal users",
+    alt: "The HomeID app user-state framework as a table: states from churned to loyal, with who they are, the objective and key actions",
   },
   "product-coverage-pim": {
     src: productCoverage,
-    alt: "A grid of product tiles: a few covered before, most added from one product source",
+    alt: "4\u00d7 products ready to register and support within two weeks of release: a short bar before the PIM connection, a bar four times longer after",
   },
   "home-id": {
     src: homeIdLanding,

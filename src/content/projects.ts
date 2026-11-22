@@ -7,6 +7,7 @@ import appUserStates from "../../public/projects/app-user-states.jpg";
 import productCoverage from "../../public/projects/product-coverage.jpg";
 import searchLabel from "../../public/projects/search-label.jpg";
 import satisfactionGuarantee from "../../public/projects/satisfaction-guarantee.jpg";
+import airFilter from "../../public/projects/air-filter-1pln.jpg";
 import checkoutAutoRegistration from "../../public/projects/checkout-auto-registration.jpg";
 import { todo, type CaseSection, type Copy } from "./types";
 import { caseStudies } from "./work";
@@ -135,6 +136,10 @@ const workCovers: Record<string, ProjectCard["image"]> = {
   "checkout-auto-registration": {
     src: checkoutAutoRegistration,
     alt: "Philips webshop checkout in the Netherlands: the ticked box Registreer je product, and the result: +36% product registrations",
+  },
+  "air-filter-1pln": {
+    src: airFilter,
+    alt: "Home.ID campaign page in Polish: buy a Philips air purifier or humidifier and get a filter for 1 z\u0142, with buttons to create an account or log in",
   },
   "satisfaction-guarantee": {
     src: satisfactionGuarantee,

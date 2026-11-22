@@ -6,6 +6,9 @@ import serviceMap from "../../public/projects/screens/service-centers-map.jpg";
 import productPage from "../../public/projects/screens/home-id-product-page.jpg";
 import supportSearch from "../../public/projects/screens/support-search.jpg";
 import homeIdLanding from "../../public/projects/home-id-landing.jpg";
+import airFilterHero from "../../public/projects/screens/air-filter-hero.jpg";
+import airFilterSteps from "../../public/projects/screens/air-filter-steps.jpg";
+import airFilterModels from "../../public/projects/screens/air-filter-models.jpg";
 import checkoutRegister from "../../public/projects/screens/checkout-register.jpg";
 
 /**
@@ -76,6 +79,29 @@ export const caseMedia: Record<string, CaseMedia> = {
       },
     ],
     links: [{ href: "https://www.home.id/it-IT/service-centers", label: "Open the live map (Italy)" }],
+  },
+  "air-filter-1pln": {
+    screens: [
+      {
+        src: airFilterHero,
+        alt: "Home.ID campaign page in Polish: buy a Philips air purifier or humidifier and get a filter for 1 z\u0142",
+        caption: "Campaign page for Poland: \u201cBuy a Philips purifier or humidifier and get a filter for 1 z\u0142!\u201d",
+        url: "https://www.home.id/pl-PL/campaign/air-1pln-2025",
+      },
+      {
+        src: airFilterSteps,
+        alt: "Five steps to claim: buy, log in or create a Home.ID account, register the product, fill in the form, wait for verification",
+        caption: "Five steps: purchase, account, product registration, claim form, verification within 21 days.",
+        url: "https://www.home.id/pl-PL/campaign/air-1pln-2025",
+      },
+      {
+        src: airFilterModels,
+        alt: "Grid of eligible air purifier and humidifier model numbers, filterable by category",
+        caption: "Eligible models. Registering one of them within the purchase window opens the claim.",
+        url: "https://www.home.id/pl-PL/campaign/air-1pln-2025",
+      },
+    ],
+    links: [{ href: "https://www.home.id/pl-PL/campaign/air-1pln-2025", label: "See the campaign page (Poland)" }],
   },
   "satisfaction-guarantee": {
     screens: [

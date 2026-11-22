@@ -92,8 +92,49 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: "checkout-auto-registration",
+    slug: "air-filter-1pln",
     index: "03",
+    title: "A replacement filter for 1 z\u0142",
+    summary: "A purchase incentive on Home.ID in Poland: buy a Philips air purifier or humidifier, register it, and get a voucher for a replacement filter for 1 z\u0142.",
+    tags: ["Campaigns", "Post-purchase", "Market personalization"],
+    role: "Product Owner, Digital Experience (Home.ID), Versuni",
+    period: "2025",
+    problem: {
+      body: "Air purifiers and humidifiers only work well with a fresh filter, and many owners never come back to buy one. Once the product leaves the store, the brand also loses the link to its owner.",
+    },
+    context: {
+      body: [
+        "Poland, 2025 edition: buy an eligible Philips air purifier or humidifier and claim a voucher to buy a replacement filter for 1 z\u0142.",
+        "65 eligible air models, mostly purifiers and humidifiers.",
+        "Runs on the same Home.ID campaign set-up as the money-back guarantee: one platform, offers that differ per market.",
+      ],
+    },
+    myRole: {
+      draft: true,
+      body: "I deployed the use case on Home.ID for Poland: the campaign landing page, the eligibility rule at product registration, and the claim form.",
+    },
+    approach: {
+      body: [
+        "One landing page with five steps: buy, log in or create a Home.ID account, register the product, fill in the form, get the result by email.",
+        "Eligibility is set at registration: the model and purchase date are checked against the campaign list and the purchase window.",
+        "Every claim is verified within 21 days. A valid claim gets the 1 z\u0142 filter voucher by email.",
+      ],
+    },
+    decision: {
+      draft: true,
+      body: "Reuse the money-back guarantee pattern instead of building a separate promotion flow. Registration stays the way in, so the business gets a verified owner and purchase date, and the reward brings the owner back for the first filter change.",
+    },
+    outcome: {
+      body: todo("What the campaign drove: claims, registrations, opt-ins or filter sales. Relative numbers only"),
+    },
+    figures: [
+      { value: "1 z\u0142", label: "replacement filter for every verified claim" },
+      { value: "65", label: "eligible air purifier and humidifier models" },
+    ],
+  },
+  {
+    slug: "checkout-auto-registration",
+    index: "04",
     title: "Registered at checkout",
     summary: "One tick at checkout registers the product for warranty on Home.ID. Live on Philips webshops in 19 countries: registrations up 36%.",
     tags: ["Registration", "E-commerce", "Post-purchase"],
@@ -137,7 +178,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "search-product-discovery",
-    index: "04",
+    index: "05",
     title: "Search that reads the label",
     summary: "Making Home.ID support search accept product codes the way people type them: straight from the label.",
     tags: ["Search", "Behavioural analysis", "Product discovery"],
@@ -179,7 +220,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "service-center-locator",
-    index: "05",
+    index: "06",
     title: "Find a repair centre near you",
     summary: "A self-service repair map on Home.ID: fewer calls to consumer care, more appliances repaired.",
     tags: ["Consumer care", "Self-service", "Repair"],
@@ -226,7 +267,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "app-user-states",
-    index: "06",
+    index: "07",
     title: "Who actually uses the app",
     summary: "A user-state framework for the HomeID app: from churned to loyal, each group with its own action and metric.",
     tags: ["App analytics", "Retention", "Segmentation"],
@@ -274,7 +315,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "product-coverage-pim",
-    index: "07",
+    index: "08",
     title: "Every product, ready to register",
     summary: "Connecting Home.ID to the company\u2019s product information system: four times the products covered, without thinning the documentation.",
     tags: ["Product data", "Compliance", "Platform"],

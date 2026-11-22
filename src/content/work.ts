@@ -94,8 +94,8 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "air-filter-1pln",
     index: "03",
-    title: "A replacement filter for 1 z\u0142",
-    summary: "A purchase incentive on Home.ID in Poland: buy a Philips air purifier or humidifier, register it, and get a voucher for a replacement filter for 1 z\u0142.",
+    title: "Register the purifier, unlock the filter",
+    summary: "A purchase incentive on Home.ID in Poland: buy a Philips air purifier or humidifier, register it, and unlock a nearly free replacement filter.",
     tags: ["Campaigns", "Post-purchase", "Market personalization"],
     role: "Product Owner, Digital Experience (Home.ID), Versuni",
     period: "2025",
@@ -104,7 +104,7 @@ export const caseStudies: CaseStudy[] = [
     },
     context: {
       body: [
-        "Poland, 2025 edition: buy an eligible Philips air purifier or humidifier and claim a voucher to buy a replacement filter for 1 z\u0142.",
+        "Poland, 2025 edition: buy an eligible Philips air purifier or humidifier and claim a voucher for a nearly free replacement filter.",
         "65 eligible air models, mostly purifiers and humidifiers.",
         "Runs on the same Home.ID campaign set-up as the money-back guarantee: one platform, offers that differ per market.",
       ],
@@ -117,7 +117,7 @@ export const caseStudies: CaseStudy[] = [
       body: [
         "One landing page with five steps: buy, log in or create a Home.ID account, register the product, fill in the form, get the result by email.",
         "Eligibility is set at registration: the model and purchase date are checked against the campaign list and the purchase window.",
-        "Every claim is verified within 21 days. A valid claim gets the 1 z\u0142 filter voucher by email.",
+        "Every claim is verified within 21 days. A valid claim gets the filter voucher by email.",
       ],
     },
     decision: {
@@ -128,7 +128,7 @@ export const caseStudies: CaseStudy[] = [
       body: todo("What the campaign drove: claims, registrations, opt-ins or filter sales. Relative numbers only"),
     },
     figures: [
-      { value: "1 z\u0142", label: "replacement filter for every verified claim" },
+      { value: "21", label: "days to verify a claim" },
       { value: "65", label: "eligible air purifier and humidifier models" },
     ],
   },

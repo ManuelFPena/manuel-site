@@ -85,7 +85,7 @@ export const caseMedia: Record<string, CaseMedia> = {
       {
         src: airFilterHero,
         alt: "Home.ID campaign page in Polish: buy a Philips air purifier or humidifier and get a filter for 1 z\u0142",
-        caption: "Campaign page for Poland: \u201cBuy a Philips purifier or humidifier and get a filter for 1 z\u0142!\u201d",
+        caption: "Campaign page for Poland: buy a Philips purifier or humidifier, get a nearly free replacement filter.",
         url: "https://www.home.id/pl-PL/campaign/air-1pln-2025",
       },
       {

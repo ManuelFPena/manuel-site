@@ -7,6 +7,7 @@ import appUserStates from "../../public/projects/app-user-states.jpg";
 import productCoverage from "../../public/projects/product-coverage.jpg";
 import searchLabel from "../../public/projects/search-label.jpg";
 import satisfactionGuarantee from "../../public/projects/satisfaction-guarantee.jpg";
+import mapalab from "../../public/projects/mapalab.jpg";
 import airFilter from "../../public/projects/air-filter-1pln.jpg";
 import checkoutAutoRegistration from "../../public/projects/checkout-auto-registration.jpg";
 import { todo, type CaseSection, type Copy } from "./types";
@@ -125,6 +126,36 @@ export const personalProjects: PersonalProject[] = [
         body: "Prototype. The size values are illustrative placeholders, not real data yet.",
       },
       { label: "Built with", body: "Python, SQLite and D3.js in the prototype; React and SVG on this page." },
+    ],
+  },
+  {
+    slug: "mapalab",
+    kind: "personal",
+    title: "MAPALAB",
+    summary: "A personal systematic investing system, built module by module with AI coding agents: data, signals, execution and a daily brief.",
+    year: "Ongoing",
+    image: { src: mapalab, alt: "MAPALAB: three modules, Data, Signals and Execution, connected by arrows above a line chart" },
+    tags: ["Data engineering", "AI agents", "Systematic investing"],
+    sections: [
+      {
+        label: "What it is",
+        body: "A personal system that pulls market data from my broker, stores it, and runs signal, rebalancing and performance tracking for my own small portfolio. It runs on a Mac mini at home.",
+      },
+      {
+        label: "How it's built",
+        body: [
+          "Separate modules for data, signals and execution. Each has its own scope and rules for the AI coding agents that help build it.",
+          "Data layer: broker data ingestion, a SQLite store and backfill protocols, so gaps are filled the same way every time.",
+          "Outputs: a P&L dashboard and a daily automated news brief on the holdings.",
+        ],
+      },
+      {
+        label: "Why",
+        draft: true,
+        body: "To learn systematic investing by building it, and to practise running AI agents on a real system with many parts.",
+      },
+      { label: "Status", body: "Personal learning project, in progress. Not investment advice." },
+      { label: "Built with", body: "Python, SQLite, the Interactive Brokers API, Streamlit and Claude Code." },
     ],
   },
 ];

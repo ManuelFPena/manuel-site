@@ -177,7 +177,7 @@ function PersonalProjectPage({ p }: { p: PersonalProject }) {
         {p.gallery && p.gallery.length > 0 && (
           <ul className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8">
             {p.gallery.map((g) => (
-              <li key={g.caption}>
+              <li key={g.caption} className={g.wide ? "sm:col-span-2" : undefined}>
                 <figure>
                   <div className="border border-rule bg-surface p-2.5 sm:p-3">
                     <Image
@@ -185,7 +185,7 @@ function PersonalProjectPage({ p }: { p: PersonalProject }) {
                       alt={g.alt}
                       placeholder="blur"
                       sizes="(min-width: 640px) 50vw, 100vw"
-                      className="aspect-[4/3] h-auto w-full object-cover"
+                      className={g.wide ? "h-auto w-full" : "aspect-[4/3] h-auto w-full object-cover"}
                     />
                   </div>
                   <figcaption className="eyebrow mt-3">{g.caption}</figcaption>

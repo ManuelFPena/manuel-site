@@ -8,6 +8,9 @@ import productCoverage from "../../public/projects/product-coverage.jpg";
 import searchLabel from "../../public/projects/search-label.jpg";
 import satisfactionGuarantee from "../../public/projects/satisfaction-guarantee.jpg";
 import mapalab from "../../public/projects/mapalab.jpg";
+import mapalabCommand from "../../public/projects/screens/mapalab-command-center.jpg";
+import mapalabPositions from "../../public/projects/screens/mapalab-positions.jpg";
+import mapalabTeam from "../../public/projects/screens/mapalab-team.jpg";
 import airFilter from "../../public/projects/air-filter-1pln.jpg";
 import checkoutAutoRegistration from "../../public/projects/checkout-auto-registration.jpg";
 import { todo, type CaseSection, type Copy } from "./types";
@@ -51,7 +54,8 @@ export type PersonalProject = ProjectCard & {
   /** Short sections, in order. Same body rules as case studies: a sentence or a few bullets. */
   sections: { label: string; body: CaseSection["body"]; draft?: boolean }[];
   /** Extra screenshots shown under the sections. */
-  gallery?: { src: StaticImageData; alt: string; caption: string }[];
+  /** `wide`: full width and uncropped, for screenshots with a lot of detail. */
+  gallery?: { src: StaticImageData; alt: string; caption: string; wide?: boolean }[];
   link?: { href: string; label: string };
   /** A working version of the project embedded on its page. */
   embed?: "book-of-sauces";
@@ -132,10 +136,10 @@ export const personalProjects: PersonalProject[] = [
     slug: "mapalab",
     kind: "personal",
     title: "MAPALAB",
-    summary: "A personal systematic investing system, built module by module with AI coding agents: data, signals, execution and a daily brief.",
+    summary: "A personal systematic investing desk run by a team of AI agents, with one owner who decides: data, signals, risk and a daily brief.",
     year: "Ongoing",
-    image: { src: mapalab, alt: "MAPALAB: three modules, Data, Signals and Execution, connected by arrows above a line chart" },
-    tags: ["Data engineering", "AI agents", "Systematic investing"],
+    image: { src: mapalab, alt: "MAPALAB team diagram: the owner at the top, a Chief of Staff agent routing work to investing, money and build roles, and a Reviewer checking work before it reaches the owner" },
+    tags: ["AI agents", "Data engineering", "Systematic investing"],
     sections: [
       {
         label: "What it is",
@@ -144,7 +148,9 @@ export const personalProjects: PersonalProject[] = [
       {
         label: "How it's built",
         body: [
-          "Separate modules for data, signals and execution. Each has its own scope and rules for the AI coding agents that help build it.",
+          "A team of AI agents, each with one role and its own rules: strategy, markets, research, risk, cash and engineering. A Chief of Staff routes the work and a Reviewer checks it before it reaches me.",
+          "Every task sits on one board. Anything that needs a decision comes back to me: the agents propose, I decide.",
+          "Separate modules for data, signals and execution, built with the same agents.",
           "Data layer: broker data ingestion, a SQLite store and backfill protocols, so gaps are filled the same way every time.",
           "Outputs: a P&L dashboard and a daily automated news brief on the holdings.",
         ],
@@ -156,6 +162,12 @@ export const personalProjects: PersonalProject[] = [
       },
       { label: "Status", body: "Personal learning project, in progress. Not investment advice." },
       { label: "Built with", body: "Python, SQLite, the Interactive Brokers API, Streamlit and Claude Code." },
+    ],
+    gallery: [
+      { wide: true, src: mapalab, alt: "MAPALAB team diagram: owner, Chief of Staff, investing, money and build roles, and a Reviewer", caption: "The team: one owner, a Chief of Staff, specialist agents and a Reviewer." },
+      { wide: true, src: mapalabTeam, alt: "MAPALAB Team board: agent roles across the top, tasks in Needs you, Working, Queued and Done columns", caption: "Team board: every agent's work in one place. Example tasks." },
+      { wide: true, src: mapalabCommand, alt: "MAPALAB Command Center: return and drawdown cards, NAV, return and drawdown charts, monthly results and a daily-returns heatmap", caption: "Command Center: NAV, return and drawdown on one page. Dummy data." },
+      { wide: true, src: mapalabPositions, alt: "MAPALAB Positions page with stop-level warnings, a return chart, a holdings table and the AI assistant's portfolio summary", caption: "Positions, with stop-level warnings and the AI assistant's summary. Dummy data." },
     ],
   },
 ];

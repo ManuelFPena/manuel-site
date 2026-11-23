@@ -179,15 +179,21 @@ function PersonalProjectPage({ p }: { p: PersonalProject }) {
             {p.gallery.map((g) => (
               <li key={g.caption} className={g.wide ? "sm:col-span-2" : undefined}>
                 <figure>
-                  <div className="border border-rule bg-surface p-2.5 sm:p-3">
-                    <Image
-                      src={g.src}
-                      alt={g.alt}
-                      placeholder="blur"
-                      sizes="(min-width: 640px) 50vw, 100vw"
-                      className={g.wide ? "h-auto w-full" : "aspect-[4/3] h-auto w-full object-cover"}
-                    />
-                  </div>
+                  {g.window ? (
+                    <AppWindow title={g.window}>
+                      <Image src={g.src} alt={g.alt} placeholder="blur" sizes="(min-width: 1024px) 960px, 100vw" className="block h-auto w-full" />
+                    </AppWindow>
+                  ) : (
+                    <div className="border border-rule bg-surface p-2.5 sm:p-3">
+                      <Image
+                        src={g.src}
+                        alt={g.alt}
+                        placeholder="blur"
+                        sizes="(min-width: 640px) 50vw, 100vw"
+                        className={g.wide ? "h-auto w-full" : "aspect-[4/3] h-auto w-full object-cover"}
+                      />
+                    </div>
+                  )}
                   <figcaption className="eyebrow mt-3">{g.caption}</figcaption>
                 </figure>
               </li>

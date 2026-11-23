@@ -57,7 +57,7 @@ export type PersonalProject = ProjectCard & {
   sections: { label: string; body: CaseSection["body"]; draft?: boolean }[];
   /** Extra screenshots shown under the sections. */
   /** `wide`: full width and uncropped, for screenshots with a lot of detail. */
-  gallery?: { src: StaticImageData; alt: string; caption: string; wide?: boolean }[];
+  gallery?: { src: StaticImageData; alt: string; caption: string; wide?: boolean; /** Shows the image in a macOS app window with this title. */ window?: string }[];
   link?: { href: string; label: string };
   /** A working version of the project embedded on its page. */
   embed?: "book-of-sauces";
@@ -167,9 +167,9 @@ export const personalProjects: PersonalProject[] = [
     ],
     gallery: [
       { wide: true, src: mapalab, alt: "MAPALAB team diagram: owner, Chief of Staff, investing, money and build roles, and a Reviewer", caption: "The team: one owner, a Chief of Staff, specialist agents and a Reviewer." },
-      { wide: true, src: mapalabTeam, alt: "MAPALAB Team board: agent roles across the top, tasks in Needs you, Working, Queued and Done columns", caption: "Team board: every agent's work in one place. Example tasks." },
-      { wide: true, src: mapalabCommand, alt: "MAPALAB Command Center: return and drawdown cards, NAV, return and drawdown charts, monthly results and a daily-returns heatmap", caption: "Command Center: NAV, return and drawdown on one page. Dummy data." },
-      { wide: true, src: mapalabPositions, alt: "MAPALAB Positions page with stop-level warnings, a return chart, a holdings table and the AI assistant's portfolio summary", caption: "Positions, with stop-level warnings and the AI assistant's summary. Dummy data." },
+      { wide: true, window: "MAPALAB · Team", src: mapalabTeam, alt: "MAPALAB Team board: agent roles across the top, tasks in Needs you, Working, Queued and Done columns", caption: "Team board: every agent's work in one place. Example tasks." },
+      { wide: true, window: "MAPALAB · Command Center", src: mapalabCommand, alt: "MAPALAB Command Center: return and drawdown cards, NAV, return and drawdown charts, monthly results and a daily-returns heatmap", caption: "Command Center: NAV, return and drawdown on one page. Dummy data." },
+      { wide: true, window: "MAPALAB · Positions", src: mapalabPositions, alt: "MAPALAB Positions page with stop-level warnings, a return chart, a holdings table and the AI assistant's portfolio summary", caption: "Positions, with stop-level warnings and the AI assistant's summary. Dummy data." },
     ],
   },
 ];

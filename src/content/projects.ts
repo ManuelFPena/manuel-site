@@ -11,6 +11,8 @@ import mapalab from "../../public/projects/mapalab.jpg";
 import mapalabCommand from "../../public/projects/screens/mapalab-command-center.jpg";
 import mapalabPositions from "../../public/projects/screens/mapalab-positions.jpg";
 import mapalabTeam from "../../public/projects/screens/mapalab-team.jpg";
+import growthDrivers from "../../public/projects/growth-why-revenue-moved.jpg";
+import growthMatrix from "../../public/projects/growth-where-to-look.jpg";
 import airFilter from "../../public/projects/air-filter-1pln.jpg";
 import checkoutAutoRegistration from "../../public/projects/checkout-auto-registration.jpg";
 import { todo, type CaseSection, type Copy } from "./types";
@@ -179,6 +181,14 @@ const workCovers: Record<string, ProjectCard["image"]> = {
   "checkout-auto-registration": {
     src: checkoutAutoRegistration,
     alt: "Philips webshop checkout in the Netherlands: the ticked box Registreer je product, and the result: +36% product registrations",
+  },
+  "growth-intelligence-revenue-drivers": {
+    src: growthDrivers,
+    alt: "Why revenue moved: monthly revenue change split into volume, price and mix bars with the actual change as a line. Dummy data",
+  },
+  "growth-intelligence-trading-matrix": {
+    src: growthMatrix,
+    alt: "Where to look next: a bubble matrix of categories by growth and revenue share, in Defend, Recover, Emerging and Review quadrants. Dummy data",
   },
   "air-filter-1pln": {
     src: airFilter,

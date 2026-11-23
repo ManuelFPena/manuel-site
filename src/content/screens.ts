@@ -9,6 +9,11 @@ import homeIdLanding from "../../public/projects/home-id-landing.jpg";
 import airFilterHero from "../../public/projects/screens/air-filter-hero.jpg";
 import airFilterSteps from "../../public/projects/screens/air-filter-steps.jpg";
 import airFilterModels from "../../public/projects/screens/air-filter-models.jpg";
+import gChart from "../../public/projects/screens/growth-a-chart.jpg";
+import gTable from "../../public/projects/screens/growth-a-table.jpg";
+import gRules from "../../public/projects/screens/growth-a-rules.jpg";
+import gMatrix from "../../public/projects/screens/growth-b-matrix.jpg";
+import gDrill from "../../public/projects/screens/growth-b-drill.jpg";
 import checkoutRegister from "../../public/projects/screens/checkout-register.jpg";
 
 /**
@@ -79,6 +84,19 @@ export const caseMedia: Record<string, CaseMedia> = {
       },
     ],
     links: [{ href: "https://www.home.id/it-IT/service-centers", label: "Open the live map (Italy)" }],
+  },
+  "growth-intelligence-revenue-drivers": {
+    screens: [
+      { src: gChart, alt: "Bar chart of monthly revenue change split into volume, price and mix, with the actual change as a line. Dummy data", caption: "Volume, price and mix add up to the actual change every month. Dummy data.", url: "Databricks notebook · dummy data" },
+      { src: gTable, alt: "Table of monthly revenue change by driver, with the main driver per month. Dummy data", caption: "One main driver per month, or balanced when none leads. Dummy data.", url: "Databricks notebook · dummy data" },
+      { src: gRules, alt: "Rule book cards that turn each driver pattern into a plain-language story", caption: "The rule book: from driver pattern to a story the business can act on.", url: "Databricks notebook · dummy data" },
+    ],
+  },
+  "growth-intelligence-trading-matrix": {
+    screens: [
+      { src: gMatrix, alt: "Bubble matrix of categories by revenue growth and share of revenue, in four quadrants. Dummy data", caption: "Category level: growth against share of revenue, last complete month. Dummy data.", url: "Databricks notebook · dummy data" },
+      { src: gDrill, alt: "Four small bubble matrices: country, business unit, category and product. Dummy data", caption: "The same matrix at four levels, from country down to product. Dummy data.", url: "Databricks notebook · dummy data" },
+    ],
   },
   "air-filter-1pln": {
     screens: [

@@ -91,8 +91,91 @@ export const caseStudies: CaseStudy[] = [
     figures: [{ value: "4\u00d7", label: "more products available for registration and support, within two weeks of release" }],
   },
   {
-    slug: "satisfaction-guarantee",
+    slug: "growth-intelligence-revenue-drivers",
     index: "03",
+    title: "Growth intelligence: why revenue moved",
+    summary: "A price, volume and mix model for D2C revenue: every month, which driver moved revenue, by business unit, with the story written out.",
+    tags: ["Growth intelligence", "Price-volume-mix", "Revenue analytics"],
+    role: "Product Owner, Versuni",
+    period: "2026",
+    problem: {
+      body: "Revenue reports showed how much revenue moved, not why. A weak month can mean fewer orders, deeper discounts or a cheaper mix of products, and each one needs a different response.",
+    },
+    context: {
+      body: [
+        "Philips direct-to-consumer webshops across Europe and the US, five business units from coffee to garment care.",
+        "Order-level sales data joined to the product master, month by month and week by week.",
+        "Part of a growth intelligence notebook I built in Databricks, together with the trading performance matrix.",
+      ],
+    },
+    myRole: {
+      body: [
+        "Built it end to end on my own: the data pipelines from the order and product master tables, the model, the charts and the narrative rules.",
+        "Python and SQL in Databricks.",
+      ],
+    },
+    approach: {
+      body: [
+        "Split every month's revenue change into volume (units sold), price (revenue per unit) and mix (which categories sold), category by category.",
+        "Check that the three drivers add up exactly to the actual change, so the numbers can be trusted in a review.",
+        "Write a plain-language reading for each driver and combination, so the review starts from the story, not the spreadsheet.",
+      ],
+    },
+    decision: {
+      body: "Name one main driver per month instead of showing three numbers. When no driver is at least 25% bigger than the next, call the month balanced and drill down to category or product before drawing conclusions.",
+    },
+    outcome: {
+      body: [
+        "In a peak sales month the model showed the full picture: growth came from volume, discounts took part of it back through price, and a shift to premium products added it back through mix.",
+        todo("Who used it and what changed: e.g. monthly trading review, promotion follow-up. Relative indicators only"),
+      ],
+    },
+    figures: [
+      { value: "3", label: "drivers: volume, price and mix" },
+      { value: "100%", label: "of each month's revenue change explained" },
+    ],
+  },
+  {
+    slug: "growth-intelligence-trading-matrix",
+    index: "04",
+    title: "Growth intelligence: where to look next",
+    summary: "A bubble matrix for trading reviews: growth against revenue share, from country down to product, sorted into Defend, Recover, Emerging and Review.",
+    tags: ["Growth intelligence", "Category growth", "Data visualization"],
+    role: "Product Owner, Versuni",
+    period: "2026",
+    problem: {
+      body: "Monthly trading tables list every country, category and product with a growth rate. Big and small lines look the same, so attention goes to the biggest swing, not the biggest risk.",
+    },
+    context: {
+      body: [
+        "Same D2C sales data as the revenue driver model, across countries, business units, categories and products.",
+        "Built for the monthly trading review: which markets and products need attention first.",
+      ],
+    },
+    myRole: {
+      body: "Built it end to end on my own, from the data pipelines to the matrix and the reading guide for the business.",
+    },
+    approach: {
+      body: [
+        "Plot growth against share of revenue, with bubble size for revenue and colour for direction.",
+        "Four quadrants, each with its own question: Defend (large, growing), Recover (large, declining), Emerging (small, growing), Review (small, declining).",
+        "The same matrix at four levels, from country to business unit, category and product, to move from where to why.",
+      ],
+    },
+    decision: {
+      body: "Compare complete months only. A month in progress always looks like a decline and sends the team after problems that aren't there, so the matrix waits for the month to close.",
+    },
+    outcome: {
+      body: todo("Who uses it and what it changed: e.g. which quadrant or market got action first. Relative indicators only"),
+    },
+    figures: [
+      { value: "4", label: "quadrants, each with its own action" },
+      { value: "4", label: "levels, from country down to product" },
+    ],
+  },
+  {
+    slug: "satisfaction-guarantee",
+    index: "05",
     title: "A 60-day money-back guarantee, built on registration",
     summary: "Running the Philips satisfaction guarantee through Home.ID: register the product, check eligibility, claim in one flow. Live in Poland and the Nordics.",
     tags: ["Campaigns", "Post-purchase", "Market personalization"],
@@ -133,7 +216,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "air-filter-1pln",
-    index: "04",
+    index: "06",
     title: "Register the purifier, unlock the filter",
     summary: "A purchase incentive on Home.ID in Poland: buy a Philips air purifier or humidifier, register it, and unlock a nearly free replacement filter.",
     tags: ["Campaigns", "Post-purchase", "Market personalization"],
@@ -174,7 +257,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "checkout-auto-registration",
-    index: "05",
+    index: "07",
     title: "Registered at checkout",
     summary: "One tick at checkout registers the product for warranty on Home.ID. Live on Philips webshops in 19 countries: registrations up 36%.",
     tags: ["Registration", "E-commerce", "Post-purchase"],
@@ -218,7 +301,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "search-product-discovery",
-    index: "06",
+    index: "08",
     title: "Search that reads the label",
     summary: "Making Home.ID support search accept product codes the way people type them: straight from the label.",
     tags: ["Search", "Behavioural analysis", "Product discovery"],
@@ -260,7 +343,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "service-center-locator",
-    index: "07",
+    index: "09",
     title: "Find a repair centre near you",
     summary: "A self-service repair map on Home.ID: fewer calls to consumer care, more appliances repaired.",
     tags: ["Consumer care", "Self-service", "Repair"],
@@ -307,7 +390,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "app-user-states",
-    index: "08",
+    index: "10",
     title: "Who actually uses the app",
     summary: "A user-state framework for the HomeID app: from churned to loyal, each group with its own action and metric.",
     tags: ["App analytics", "Retention", "Segmentation"],

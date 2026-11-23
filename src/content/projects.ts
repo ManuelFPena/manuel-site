@@ -8,6 +8,7 @@ import productCoverage from "../../public/projects/product-coverage.jpg";
 import searchLabel from "../../public/projects/search-label.jpg";
 import satisfactionGuarantee from "../../public/projects/satisfaction-guarantee.jpg";
 import mapalab from "../../public/projects/mapalab.jpg";
+import mapalabCover from "../../public/projects/mapalab-cover.jpg";
 import mapalabCommand from "../../public/projects/screens/mapalab-command-center.jpg";
 import mapalabPositions from "../../public/projects/screens/mapalab-positions.jpg";
 import mapalabFlow from "../../public/projects/screens/mapalab-team-flow.jpg";
@@ -141,7 +142,7 @@ export const personalProjects: PersonalProject[] = [
     title: "MAPALAB",
     summary: "A personal systematic investing desk run by a team of AI agents, with one owner who decides: data, signals, risk and a daily brief.",
     year: "Ongoing",
-    image: { src: mapalab, alt: "MAPALAB team diagram: the owner at the top, a Chief of Staff agent routing work to investing, money and build roles, and a Reviewer checking work before it reaches the owner" },
+    image: { src: mapalabCover, alt: "MAPALAB Team flow view: the Chief of Staff routes work to agent roles and decisions flow to the owner. Example tasks" },
     tags: ["AI agents", "Data engineering", "Systematic investing"],
     sections: [
       {

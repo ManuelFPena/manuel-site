@@ -10,6 +10,7 @@ import satisfactionGuarantee from "../../public/projects/satisfaction-guarantee.
 import mapalab from "../../public/projects/mapalab.jpg";
 import mapalabCommand from "../../public/projects/screens/mapalab-command-center.jpg";
 import mapalabPositions from "../../public/projects/screens/mapalab-positions.jpg";
+import mapalabFlow from "../../public/projects/screens/mapalab-team-flow.jpg";
 import mapalabTeam from "../../public/projects/screens/mapalab-team.jpg";
 import growthDrivers from "../../public/projects/growth-why-revenue-moved.jpg";
 import growthMatrix from "../../public/projects/growth-where-to-look.jpg";
@@ -167,9 +168,10 @@ export const personalProjects: PersonalProject[] = [
     ],
     gallery: [
       { wide: true, src: mapalab, alt: "MAPALAB team diagram: owner, Chief of Staff, investing, money and build roles, and a Reviewer", caption: "The team: one owner, a Chief of Staff, specialist agents and a Reviewer." },
-      { wide: true, window: "MAPALAB · Team", src: mapalabTeam, alt: "MAPALAB Team board: agent roles across the top, tasks in Needs you, Working, Queued and Done columns", caption: "Team board: every agent's work in one place. Example tasks." },
-      { wide: true, window: "MAPALAB · Command Center", src: mapalabCommand, alt: "MAPALAB Command Center: return and drawdown cards, NAV, return and drawdown charts, monthly results and a daily-returns heatmap", caption: "Command Center: NAV, return and drawdown on one page. Dummy data." },
-      { wide: true, window: "MAPALAB · Positions", src: mapalabPositions, alt: "MAPALAB Positions page with stop-level warnings, a return chart, a holdings table and the AI assistant's portfolio summary", caption: "Positions, with stop-level warnings and the AI assistant's summary. Dummy data." },
+      { wide: true, src: mapalabFlow, alt: "MAPALAB Team flow view: the Chief of Staff routes work to agent roles, lines show where each role's tasks stand, and decisions flow to the owner", caption: "Team flow: who holds the work, where it stands, and what is waiting on me. Example tasks." },
+      { wide: true, src: mapalabTeam, alt: "MAPALAB Team board: agent roles across the top, tasks in Needs you, Working, Queued and Done columns", caption: "Team board: every agent's work in one place. Example tasks." },
+      { wide: true, src: mapalabCommand, alt: "MAPALAB Command Center: return and drawdown cards, NAV, return and drawdown charts, monthly results and a daily-returns heatmap", caption: "Command Center: NAV, return and drawdown on one page. Dummy data." },
+      { wide: true, src: mapalabPositions, alt: "MAPALAB Positions page with stop-level warnings, a return chart, a holdings table and the AI assistant's portfolio summary", caption: "Positions, with stop-level warnings and the AI assistant's summary. Dummy data." },
     ],
   },
 ];

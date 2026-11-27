@@ -7,15 +7,6 @@ import appUserStates from "../../public/projects/app-user-states.jpg";
 import productCoverage from "../../public/projects/product-coverage.jpg";
 import searchLabel from "../../public/projects/search-label.jpg";
 import satisfactionGuarantee from "../../public/projects/satisfaction-guarantee.jpg";
-import mapalab from "../../public/projects/mapalab.jpg";
-import mapalabCover from "../../public/projects/mapalab-cover.jpg";
-import mapalabCommand from "../../public/projects/screens/mapalab-command-center.jpg";
-import mapalabPositions from "../../public/projects/screens/mapalab-positions.jpg";
-import mapalabFlow from "../../public/projects/screens/mapalab-team-flow.jpg";
-import mapalabTeam from "../../public/projects/screens/mapalab-team.jpg";
-import growthDrivers from "../../public/projects/growth-why-revenue-moved.jpg";
-import growthMatrix from "../../public/projects/growth-where-to-look.jpg";
-import airFilter from "../../public/projects/air-filter-1pln.jpg";
 import checkoutAutoRegistration from "../../public/projects/checkout-auto-registration.jpg";
 import { todo, type CaseSection, type Copy } from "./types";
 import { caseStudies } from "./work";
@@ -58,8 +49,7 @@ export type PersonalProject = ProjectCard & {
   /** Short sections, in order. Same body rules as case studies: a sentence or a few bullets. */
   sections: { label: string; body: CaseSection["body"]; draft?: boolean }[];
   /** Extra screenshots shown under the sections. */
-  /** `wide`: full width and uncropped, for screenshots with a lot of detail. */
-  gallery?: { src: StaticImageData; alt: string; caption: string; wide?: boolean; /** Shows the image in a macOS app window with this title. */ window?: string }[];
+  gallery?: { src: StaticImageData; alt: string; caption: string }[];
   link?: { href: string; label: string };
   /** A working version of the project embedded on its page. */
   embed?: "book-of-sauces";
@@ -136,45 +126,6 @@ export const personalProjects: PersonalProject[] = [
       { label: "Built with", body: "Python, SQLite and D3.js in the prototype; React and SVG on this page." },
     ],
   },
-  {
-    slug: "mapalab",
-    kind: "personal",
-    title: "MAPALAB",
-    summary: "A personal systematic investing desk run by a team of AI agents, with one owner who decides: data, signals, risk and a daily brief.",
-    year: "Ongoing",
-    image: { src: mapalabCover, alt: "MAPALAB Team flow view: the Chief of Staff routes work to agent roles and decisions flow to the owner. Example tasks" },
-    tags: ["AI agents", "Data engineering", "Systematic investing"],
-    sections: [
-      {
-        label: "What it is",
-        body: "A personal system that pulls market data from my broker, stores it, and runs signal, rebalancing and performance tracking for my own small portfolio. It runs on a Mac mini at home.",
-      },
-      {
-        label: "How it's built",
-        body: [
-          "A team of AI agents, each with one role and its own rules: strategy, markets, research, risk, cash and engineering. A Chief of Staff routes the work and a Reviewer checks it before it reaches me.",
-          "Every task sits on one board. Anything that needs a decision comes back to me: the agents propose, I decide.",
-          "Separate modules for data, signals and execution, built with the same agents.",
-          "Data layer: broker data ingestion, a SQLite store and backfill protocols, so gaps are filled the same way every time.",
-          "Outputs: a P&L dashboard and a daily automated news brief on the holdings.",
-        ],
-      },
-      {
-        label: "Why",
-        draft: true,
-        body: "To learn systematic investing by building it, and to practise running AI agents on a real system with many parts.",
-      },
-      { label: "Status", body: "Personal learning project, in progress. Not investment advice." },
-      { label: "Built with", body: "Python, SQLite, the Interactive Brokers API, Streamlit and Claude Code." },
-    ],
-    gallery: [
-      { wide: true, src: mapalab, alt: "MAPALAB team diagram: owner, Chief of Staff, investing, money and build roles, and a Reviewer", caption: "The team: one owner, a Chief of Staff, specialist agents and a Reviewer." },
-      { wide: true, src: mapalabFlow, alt: "MAPALAB Team flow view: the Chief of Staff routes work to agent roles, lines show where each role's tasks stand, and decisions flow to the owner", caption: "Team flow: who holds the work, where it stands, and what is waiting on me. Example tasks." },
-      { wide: true, src: mapalabTeam, alt: "MAPALAB Team board: agent roles across the top, tasks in Needs you, Working, Queued and Done columns", caption: "Team board: every agent's work in one place. Example tasks." },
-      { wide: true, src: mapalabCommand, alt: "MAPALAB Command Center: return and drawdown cards, NAV, return and drawdown charts, monthly results and a daily-returns heatmap", caption: "Command Center: NAV, return and drawdown on one page. Dummy data." },
-      { wide: true, src: mapalabPositions, alt: "MAPALAB Positions page with stop-level warnings, a return chart, a holdings table and the AI assistant's portfolio summary", caption: "Positions, with stop-level warnings and the AI assistant's summary. Dummy data." },
-    ],
-  },
 ];
 
 /** Commercial case studies as cards. Generated covers until real visuals are added. */
@@ -184,18 +135,6 @@ const workCovers: Record<string, ProjectCard["image"]> = {
   "checkout-auto-registration": {
     src: checkoutAutoRegistration,
     alt: "Philips webshop checkout in the Netherlands: the ticked box Registreer je product, and the result: +36% product registrations",
-  },
-  "growth-intelligence-revenue-drivers": {
-    src: growthDrivers,
-    alt: "Why revenue moved: monthly revenue change split into volume, price and mix bars with the actual change as a line. Dummy data",
-  },
-  "growth-intelligence-trading-matrix": {
-    src: growthMatrix,
-    alt: "Where to look next: a bubble matrix of categories by growth and revenue share, in Defend, Recover, Emerging and Review quadrants. Dummy data",
-  },
-  "air-filter-1pln": {
-    src: airFilter,
-    alt: "Home.ID campaign page in Polish: buy a Philips air purifier or humidifier and get a filter for 1 z\u0142, with buttons to create an account or log in",
   },
   "satisfaction-guarantee": {
     src: satisfactionGuarantee,
@@ -207,11 +146,11 @@ const workCovers: Record<string, ProjectCard["image"]> = {
   },
   "app-user-states": {
     src: appUserStates,
-    alt: "The HomeID app user-state framework as a table: states from churned to loyal, with who they are, the objective and key actions",
+    alt: "Six columns of dots, sparse for churned users and dense for loyal users",
   },
   "product-coverage-pim": {
     src: productCoverage,
-    alt: "4\u00d7 products ready to register and support within two weeks of release: a short bar before the PIM connection, a bar four times longer after",
+    alt: "A grid of product tiles: a few covered before, most added from one product source",
   },
   "home-id": {
     src: homeIdLanding,

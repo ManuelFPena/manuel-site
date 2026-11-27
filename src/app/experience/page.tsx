@@ -4,7 +4,7 @@ import { Container } from "@/components/Container";
 import { PageIntro } from "@/components/PageIntro";
 import { Tags } from "@/components/Tags";
 import { Text, TodoTag } from "@/components/Text";
-import { contact, fluency } from "@/content/site";
+import { contact, fluency, site } from "@/content/site";
 import { chapters, education, languages } from "@/content/experience";
 import { isTodo } from "@/content/types";
 
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 export default function ExperiencePage() {
   return (
     <>
-      <PageIntro label="Experience" title="Three chapters, one direction.">
-        <p>From business intelligence, to digital analytics and data products, to product ownership. Newest first.</p>
+      <PageIntro label="Experience" title={site.headline}>
+        <p>{site.profile}</p>
       </PageIntro>
 
       <Container className="pb-14 lg:pb-20">

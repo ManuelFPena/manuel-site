@@ -17,6 +17,9 @@ import growthDrivers from "../../public/projects/growth-why-revenue-moved.jpg";
 import growthMatrix from "../../public/projects/growth-where-to-look.jpg";
 import airFilter from "../../public/projects/air-filter-1pln.jpg";
 import checkoutAutoRegistration from "../../public/projects/checkout-auto-registration.jpg";
+import saucesCover from "../../public/projects/book-of-sauces-cover.jpg";
+import saucesPesto from "../../public/projects/screens/book-of-sauces-pesto-price.jpg";
+import saucesMap from "../../public/projects/screens/book-of-sauces-map.jpg";
 import { todo, type CaseSection, type Copy } from "./types";
 import { caseStudies } from "./work";
 
@@ -105,9 +108,9 @@ export const personalProjects: PersonalProject[] = [
     title: "The Book of Sauces",
     summary: "Sauces of the world, connected by the ingredients they share. An interactive map.",
     year: "2026",
-    interactive: "book-of-sauces",
-    embed: "book-of-sauces",
+    image: { src: saucesCover, alt: "Book of Sauces map: Pesto outlined around basil, hard cheese, pine nuts, garlic and olive oil, circles sized by price" },
     tags: ["Data visualization", "Cooking", "Prototype"],
+    link: { href: "https://book-of-sauces.vercel.app/sauce/chermoula", label: "Open the live app" },
     sections: [
       {
         label: "What it is",
@@ -118,7 +121,7 @@ export const personalProjects: PersonalProject[] = [
         body: [
           "Each circle is an ingredient. Open a sauce to outline its ingredients.",
           "Select an ingredient to see every sauce that uses it, from pesto to harissa.",
-          "Circles can be sized by market size, price or availability.",
+          "Size circles by price to see which ingredients cost the most. Market size and availability come next.",
         ],
       },
       {
@@ -126,14 +129,18 @@ export const personalProjects: PersonalProject[] = [
         body: [
           "A recipe database with a cited source for every sauce.",
           "An export step that turns the recipes into a network of shared ingredients.",
-          "The interactive map above, rebuilt here from the prototype.",
+          "A live web app with a page per sauce and real supermarket prices.",
         ],
       },
       {
         label: "Status",
-        body: "Prototype. The size values are illustrative placeholders, not real data yet.",
+        body: "Live prototype. Prices come from Dutch supermarket web shops (Nov 2026) and cover 25 of the 30 ingredients.",
       },
-      { label: "Built with", body: "Python, SQLite and D3.js in the prototype; React and SVG on this page." },
+      { label: "Built with", body: "Python and SQLite for the recipe data. The app runs on Vercel." },
+    ],
+    gallery: [
+      { wide: true, src: saucesPesto, alt: "Book of Sauces with Pesto open: its five ingredients outlined on the map, circles sized by price, and the recipe with prices per ingredient", caption: "Pesto open, circles sized by price. Prices from Dutch supermarkets, Nov 2026." },
+      { wide: true, src: saucesMap, alt: "Book of Sauces overview: 30 ingredient circles joined by lines, sauce names placed among them, and the Try the path guide", caption: "The whole book: 30 ingredients, 11 sauces, one map." },
     ],
   },
   {

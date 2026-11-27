@@ -4,6 +4,10 @@ export const site = {
   name: "Manuel Fernández",
   role: "Product Owner, Digital Experience (Home.ID) at Versuni",
   location: "Amsterdam",
+  /** Same title and profile as the CV (CV_Manuel_Fernandez.pdf, 27 Nov 2026). */
+  headline: "Product Manager · Data Products & Commercial Analytics",
+  profile:
+    "Product Manager building data products and commercial analytics. I turn fragmented data and unclear problems into capabilities teams can build on: from lifecycle frameworks and CDPs to a post-purchase platform in 57 countries.",
   /** Set NEXT_PUBLIC_SITE_URL in production so canonical and OG URLs are absolute. */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
   title: "Manuel Fernández · Product, e-commerce and analytics",

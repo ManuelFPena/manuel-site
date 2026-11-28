@@ -36,12 +36,12 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 }
 
 const sections: { key: "problem" | "context" | "myRole" | "approach" | "decision" | "outcome"; label: string }[] = [
-  { key: "problem", label: "Problem" },
+  { key: "problem", label: "Situation" },
   { key: "context", label: "Context" },
-  { key: "myRole", label: "My role" },
-  { key: "approach", label: "Approach" },
-  { key: "decision", label: "Decision" },
-  { key: "outcome", label: "Outcome" },
+  { key: "myRole", label: "Task" },
+  { key: "approach", label: "Action" },
+  { key: "decision", label: "Key decision" },
+  { key: "outcome", label: "Result" },
 ];
 
 function SectionBody({ section }: { section: CaseSection }) {

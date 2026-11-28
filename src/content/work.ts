@@ -15,39 +15,45 @@ export const caseStudies: CaseStudy[] = [
     slug: "home-id",
     index: "01",
     title: "Home.ID: everything after the purchase",
-    summary: "The post-purchase platform for Philips home appliances: register, get answers, fix a problem, find a repair. One platform, many countries.",
-    tags: ["Product ownership", "Post-purchase", "Platform"],
+    summary: "The post-purchase home for Philips home appliances, live in 57 countries: one account for warranty, manuals, support, repairs and spare parts, and the content source for our care chatbots.",
+    tags: ["Product ownership", "Post-purchase", "Platform", "AI-ready data"],
     role: "Product Owner, Digital Experience (Home.ID), Versuni",
     period: "2025 \u2013 present",
     problem: {
-      body: "After buying an appliance, people need answers fast: how to use it, how to fix it, what the warranty covers, who can repair it. Those answers sat across many systems and differed by country.",
+      body: "After checkout, the relationship with the owner went dark. Manuals sat in PDFs, warranty proof on paper receipts, and support meant a phone call. Answers differed by country, and we often didn\u2019t know who owned what, so every care contact started from zero.",
     },
     context: {
       body: [
-        "Home.ID is the post-purchase site and account for Philips home appliances, run by Versuni under the Philips brand licence.",
-        "Every box and manual points to it: a QR code on the packaging opens the product's own page.",
+        "Home.ID is the post-purchase site and account for Philips home appliances, run by Versuni under the Philips brand licence. A QR code on every box opens the product\u2019s own page.",
         "57 countries and scaling, each with its own language, legal, content and service-partner needs.",
+        "The same product content serves three channels: the website, the HomeID app and our customer care chatbots.",
       ],
     },
     myRole: {
-      body: "I own strategy, roadmap and backlog, and bring market, legal, content and engineering needs into one roadmap. I deliver with Engineering, UX, Consumer Care, Legal and local markets.",
+      body: "I own strategy, roadmap and backlog for the platform. I turn behavioural data into product decisions, then measure the result. I deliver with Engineering, UX, Consumer Care, Legal and local markets.",
     },
     approach: {
-      draft: true,
       body: [
-        "One account for every appliance, shared with the HomeID app. Register in two minutes to confirm the warranty.",
-        "One page per model: answers, troubleshooting, spare parts, repair booking, warranty and contact (call or WhatsApp).",
-        "One global platform with an explicit line between global and local: language, legal and service partners vary, the product doesn't.",
+        "For owners: one account for every appliance, shared with the HomeID app. Register in two minutes to confirm the warranty, then get manuals, troubleshooting, FAQs, warranty coverage, repair centres and spare parts on one page per model.",
+        "For the business: verified owner data and marketing opt-in, fewer care contacts through self-service, spare-part revenue, and local campaigns that markets run themselves.",
+        "For AI: product content and data are structured per model and market, so care chatbots answer from the same source owners see. No separate knowledge base to maintain.",
       ],
     },
     decision: {
-      body: todo("One meaningful product decision: e.g. what to standardize versus localize, the options, the trade-off, and why"),
+      draft: true,
+      body: "Build one structured source per product, not one page per channel. Website, app and chatbots all read from the same product data, so a fix or a new market goes live everywhere at once, and the content is ready for AI assistants without a rewrite.",
     },
     outcome: {
-      body: todo("What changed for consumers or the business, e.g. self-service resolution, registrations, faster market launches. Public-safe or relative indicators only"),
+      body: [
+        "Registration at checkout on Philips webshops in 19 countries: registrations +36%, 8 in 10 buyers opt in.",
+        "4\u00d7 more products ready to register and support within two weeks of connecting the central product catalogue.",
+        "Search fixed for the ~10% of product searchers who type the full code from the label; a repair-centre map replaced a PDF list; money-back guarantee campaigns live in Poland and the Nordics.",
+      ],
     },
     figures: [
       { value: "57", label: "countries, and scaling" },
+      { value: "+36%", label: "product registrations from checkout" },
+      { value: "4\u00d7", label: "more products ready to register" },
     ],
   },
   {

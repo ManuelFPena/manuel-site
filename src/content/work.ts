@@ -17,8 +17,8 @@ export const caseStudies: CaseStudy[] = [
     slug: "home-id",
     index: "01",
     title: "Home.ID: everything after the purchase",
-    summary: "The post-purchase home for Philips home appliances, live in 57 countries: one account for warranty, manuals, support, repairs and spare parts, and the content source for our care chatbots.",
-    tags: ["Product ownership", "Post-purchase", "Platform", "AI-ready data"],
+    summary: "The post-purchase home for Philips home appliances, live in 57 countries, and the product data service behind it: one source for product information, manuals, FAQs and compliance documents that every channel draws on.",
+    tags: ["Product ownership", "Post-purchase", "Product data API", "Compliance"],
     role: "Product Owner, Digital Experience (Home.ID), Versuni",
     period: "2025 – present",
     problem: {
@@ -28,7 +28,7 @@ export const caseStudies: CaseStudy[] = [
       body: [
         "Home.ID is the post-purchase site and account for Philips home appliances, run by Versuni under the Philips brand licence. A QR code on every box opens the product’s own page.",
         "57 countries and scaling, each with its own language, legal, content and service-partner needs.",
-        "The same product content serves three channels: the website, the HomeID app and our customer care chatbots.",
+        "Regulators require current user documentation for every product on the market. Outdated or missing documents risk fines.",
       ],
     },
     myRole: {
@@ -38,12 +38,15 @@ export const caseStudies: CaseStudy[] = [
       body: [
         "For owners: one account for every appliance, shared with the HomeID app. Register in two minutes to confirm the warranty, then get manuals, troubleshooting, FAQs, warranty coverage, repair centres and spare parts on one page per model.",
         "For the business: verified owner data and marketing opt-in, fewer care contacts through self-service, spare-part revenue, and local campaigns that markets run themselves.",
-        "For AI: product content and data are structured per model and market, so care chatbots answer from the same source owners see. No separate knowledge base to maintain.",
+        "Under the hood: a service (API) that brings product information, FAQs, manuals, PDFs and compliance documents together, indexed per product and kept up to date.",
       ],
     },
     decision: {
-      draft: true,
-      body: "Build one structured source per product, not one page per channel. Website, app and chatbots all read from the same product data, so a fix or a new market goes live everywhere at once, and the content is ready for AI assistants without a rewrite.",
+      body: [
+        "Build Home.ID as a data service, not just a website. One API consolidates everything about a product and indexes it to that product: information, FAQs, manuals, PDFs and compliance documents.",
+        "Compliance: every product\u2019s documentation stays current, which protects the business from regulatory fines.",
+        "Propagation: one trusted source feeds every channel: the website, the HomeID app, care chatbots and future platforms. Update once, correct everywhere.",
+      ],
     },
     outcome: {
       body: [
